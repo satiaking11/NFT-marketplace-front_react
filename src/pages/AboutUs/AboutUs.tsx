@@ -35,8 +35,8 @@ function AboutUs() {
         </section>
         <section className="bg-light-violet -mx-20 h-[766px] flex items-center justify-between">
           <form className="pl-32 pr-20 w-full">
-            <p className="text-2xl font-semibold mb-2">Want to discuss collaboration?</p>
-            <p>Leave your email and we will get to you soon.</p>
+            <p className="text-black text-2xl font-semibold mb-2">Want to discuss collaboration?</p>
+            <p className="text-black">Leave your email and we will get to you soon.</p>
             <div className="mt-6">
               <p className="text-[12px] text-light-gray mb-2">YOUR NAME</p>
               <input type="text" className="w-full rounded-2xl px-4" placeholder="How can we call you?" />

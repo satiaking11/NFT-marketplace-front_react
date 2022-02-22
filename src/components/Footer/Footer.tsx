@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 
 function Footer() {
@@ -17,7 +18,9 @@ function Footer() {
             <li>Help Center</li>
           </ul>
           <ul>
-            <li>About us</li>
+            <li>
+              <Link to="/about-us">About us</Link>
+            </li>
             <li>Contact us</li>
             <li>Blog Page</li>
             <li>Terms of Use</li>

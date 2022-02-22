@@ -18,7 +18,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen dark:bg-black-900 bg-transparent dark:text-[#E5E5E5]">
+    <div className="min-h-screen dark:bg-black-900 bg-white dark:text-[#E5E5E5]">
       <BrowserRouter>
         <Topbar />
         <Routes>

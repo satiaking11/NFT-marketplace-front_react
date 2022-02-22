@@ -2,10 +2,20 @@
 import React from 'react';
 import SectionTitle from './Title';
 
-function WhyChooseUs() {
+type Props = {
+  withLabel?: boolean;
+  withMoreDetails?: boolean;
+}
+
+function WhyChooseUs({
+  withLabel = false,
+  withMoreDetails = false,
+}: Props) {
   return (
     <section className="why-choose-us">
-      <SectionTitle className="mb-6">Why Choose Us</SectionTitle>
+      {withLabel && (
+        <SectionTitle className="mb-6">Why Choose Us</SectionTitle>
+      )}
       <div className="flex justify-between gap-x-20">
         {[
           {
@@ -28,11 +38,13 @@ function WhyChooseUs() {
           </div>
         ))}
       </div>
-      <div className="py-72 flex flex-col items-center">
-        <img src="/icons/why-choose-us/below.png" alt="" />
-        <p className="text-3xl text-primary my-6">Powered by MuesliSwap</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus nulla volutpat, dictumst non, vitae aliquet enim et ut. Facilisis risus.</p>
-      </div>
+      {withMoreDetails && (
+        <div className="py-72 flex flex-col items-center">
+          <img src="/icons/why-choose-us/below.png" alt="" />
+          <p className="text-3xl text-primary my-6">Powered by MuesliSwap</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus nulla volutpat, dictumst non, vitae aliquet enim et ut. Facilisis risus.</p>
+        </div>
+      )}
     </section>
   );
 }

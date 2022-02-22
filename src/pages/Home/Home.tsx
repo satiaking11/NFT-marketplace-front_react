@@ -6,9 +6,12 @@ import FeaturedArtists from '../../components/Section/FeaturedArtists';
 import TrendingCollections from '../../components/Section/TrendingCollections';
 import TrendingNFTs from '../../components/Section/TrendingNFTs';
 import WhyChooseUs from '../../components/Section/WhyChooseUs';
+import useScrollToTop from '../../hooks/useScrollToTop';
 import './Home.sass';
 
 function Home() {
+  useScrollToTop();
+
   return (
     <div className="home-page">
       <div className="container">
@@ -66,7 +69,7 @@ function Home() {
         <FeaturedArtists />
         <TrendingNFTs />
         <TrendingCollections />
-        <WhyChooseUs />
+        <WhyChooseUs withLabel withMoreDetails />
       </div>
     </div>
   );

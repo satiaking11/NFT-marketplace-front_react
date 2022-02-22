@@ -12,7 +12,9 @@ function Topbar() {
     <div className="topbar container relative z-50">
       <div className="flex items-center">
         <div className="mr-4">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <SearchInput />
       </div>

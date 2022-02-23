@@ -25,7 +25,7 @@ function Card({
 
   return (
     <div
-      className="card bg-white dark:bg-black-800 rounded-3xl overflow-hidden shadow-card flex flex-col"
+      className="card bg-white dark:bg-black-900 rounded-3xl overflow-hidden shadow-card flex flex-col"
       style={{ width }}
     >
       <img src={cover} alt="" />

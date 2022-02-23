@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
 import Topbar from '../components/Topbar/Topbar';
 import { RootState } from '../store';
-import AboutUs from './AboutUs/AboutUs';
-import Home from './Home/Home';
+import AboutUs from './AboutUs/index';
+import Home from './Home/index';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);

@@ -7,7 +7,7 @@ import TrendingCollections from '../../components/Section/TrendingCollections';
 import TrendingNFTs from '../../components/Section/TrendingNFTs';
 import WhyChooseUs from '../../components/Section/WhyChooseUs';
 import useScrollToTop from '../../hooks/useScrollToTop';
-import './Home.sass';
+import './index.sass';
 
 function Home() {
   useScrollToTop();

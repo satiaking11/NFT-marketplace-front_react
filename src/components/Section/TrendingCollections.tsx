@@ -26,7 +26,7 @@ function TrendingCollections() {
                 {' '}
                 <span className="text-link">Kimberly Mastrangelo</span>
               </p>
-              <p className="text-sm text-light-gray">
+              <p className="text-sm text-light-gray-400 dark:text-light-gray">
                 Aliquam a dui vel justo fringilla euismod id id enim. Nunc non semper tellus. Pellentesque vitae tellus non hendrerit. In...
               </p>
             </div>

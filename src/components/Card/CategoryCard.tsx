@@ -10,7 +10,7 @@ function CategoryCard({
   label,
 }: Props) {
   return (
-    <div className="p-3 bg-white dark:bg-black-800 rounded-[44px]">
+    <div className="p-3 bg-white dark:bg-black-900 rounded-[44px]">
       <img src={`/images/categories/${src}`} alt="" className="w-full" />
       <p className="text-center mt-3 text-xl">{label}</p>
     </div>

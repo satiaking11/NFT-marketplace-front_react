@@ -20,7 +20,7 @@ function Button({
 }: Props) {
   if (color === 'primary') {
     return (
-      <button type={type} {...rest} className={classNames('bg-primary text-white rounded-full dark:bg-white dark:text-primary dark:hover:bg-primary dark:hover:text-white', className)}>
+      <button type={type} {...rest} className={classNames('bg-primary text-white rounded-full dark:bg-primary-900 dark:text-white dark:hover:bg-primary dark:hover:text-white', className)}>
         {children}
       </button>
     );

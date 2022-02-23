@@ -35,10 +35,10 @@ function TrendingNFTs() {
           >
             <div className="card-details px-8 py-6">
               <p className="text-2xl mb-1">NFT name</p>
-              <p className="text-light-gray mb-2">
+              <p className="mb-2">
                 Collection name could be so long and a little bit longer
               </p>
-              <p className="text-red-400 text-lg">
+              <p className="text-red-400 dark:text-red-800 text-lg">
                 <span className="font-bold">120</span>
                 {' '}
                 ADA

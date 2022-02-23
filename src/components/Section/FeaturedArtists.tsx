@@ -17,20 +17,20 @@ function FeaturedArtists() {
               <img src="/images/avatar/stephanie.png" alt="" />
             </div>
             <p className="text-[26px] font-semibold mt-4">Stephanie Sharkey</p>
-            <p className="text-light-gray mt-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+            <p className="text-light-gray-400 dark:text-light-gray mt-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
           </div>
           <ul className="grid grid-cols-3 gap-4">
             <li>
               <p className="text-3xl font-bold">137</p>
-              <p className="text-light-gray">items</p>
+              <p className="text-light-gray-400 dark:text-light-gray">items</p>
             </li>
             <li>
               <p className="text-3xl font-bold">4</p>
-              <p className="text-light-gray">collections</p>
+              <p className="text-light-gray-400 dark:text-light-gray">collections</p>
             </li>
             <li>
               <p className="text-3xl font-bold">0.12</p>
-              <p className="text-light-gray">floor price</p>
+              <p className="text-light-gray-400 dark:text-light-gray">floor price</p>
             </li>
           </ul>
         </div>
@@ -41,7 +41,7 @@ function FeaturedArtists() {
             >
               <div className="card-details px-8 py-6">
                 <p className="text-2xl mb-1">NFT name</p>
-                <p className="text-light-gray mb-2">
+                <p className="text-light-gray-400 dark:text-light-gray mb-2">
                   Collection name could be so long and a little bit longer
                 </p>
                 <p className="text-red-400 text-lg">
@@ -58,10 +58,10 @@ function FeaturedArtists() {
             >
               <div className="card-details px-8 py-6">
                 <p className="text-2xl mb-1">NFT name</p>
-                <p className="text-light-gray mb-2">
+                <p className="text-light-gray-400 dark:text-light-gray mb-2">
                   Collection name could be so long and a little bit longer
                 </p>
-                <p className="text-red-400 text-lg">
+                <p className="text-red-400 dark:text-red-800 text-lg">
                   <span className="font-bold">120</span>
                   {' '}
                   ADA
@@ -75,10 +75,10 @@ function FeaturedArtists() {
             >
               <div className="card-details px-8 py-6">
                 <p className="text-2xl mb-1">NFT name</p>
-                <p className="text-light-gray mb-2">
+                <p className="text-light-gray-400 dark:text-light-gray mb-2">
                   Collection name could be so long and a little bit longer
                 </p>
-                <p className="text-red-400 text-lg">
+                <p className="text-red-400 dark:text-red-800 text-lg">
                   <span className="font-bold">120</span>
                   {' '}
                   ADA

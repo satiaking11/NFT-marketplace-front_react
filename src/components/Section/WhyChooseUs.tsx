@@ -41,7 +41,7 @@ function WhyChooseUs({
       {withMoreDetails && (
         <div className="py-72 flex flex-col items-center">
           <img src="/icons/why-choose-us/below.png" alt="" />
-          <p className="text-3xl text-primary my-6">Powered by MuesliSwap</p>
+          <p className="text-3xl my-6">Powered by MuesliSwap</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus nulla volutpat, dictumst non, vitae aliquet enim et ut. Facilisis risus.</p>
         </div>
       )}

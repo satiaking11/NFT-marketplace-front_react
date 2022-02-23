@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import SectionTitle from './Title';
+import { RootState } from '../../store';
 
 type Props = {
   withLabel?: boolean;
@@ -10,7 +12,9 @@ type Props = {
 function WhyChooseUs({
   withLabel = false,
   withMoreDetails = false,
+
 }: Props) {
+  const { darkMode } = useSelector((state: RootState) => state.settings);
   return (
     <section className="why-choose-us">
       {withLabel && (
@@ -40,7 +44,7 @@ function WhyChooseUs({
       </div>
       {withMoreDetails && (
         <div className="py-72 flex flex-col items-center">
-          <img src="/icons/why-choose-us/below.png" alt="" />
+          <img src={`/icons/why-choose-us/below-${darkMode ? 'dark' : 'light'}.png`} alt="below-logo" />
           <p className="text-3xl my-6">Powered by MuesliSwap</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus nulla volutpat, dictumst non, vitae aliquet enim et ut. Facilisis risus.</p>
         </div>

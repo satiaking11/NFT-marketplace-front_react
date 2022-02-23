@@ -6,6 +6,7 @@ import Topbar from '../components/Topbar/Topbar';
 import { RootState } from '../store';
 import AboutUs from './AboutUs/index';
 import Home from './Home/index';
+import Artists from './Artists/index';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -24,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/artists" element={<Artists />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

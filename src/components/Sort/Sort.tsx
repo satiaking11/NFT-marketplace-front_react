@@ -50,7 +50,7 @@ function Sort() {
       {(setIsOpen) => ({
         content: <SortContent setIsOpen={setIsOpen} />,
         button: (
-          <Button onClick={() => setIsOpen(true)}>
+          <Button className="mx-2" onClick={() => setIsOpen(true)}>
             <img src="/icons/sort.svg" alt="sort" />
             Sort By
           </Button>

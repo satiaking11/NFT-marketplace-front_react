@@ -32,7 +32,7 @@ function FilterContent({
           <p className="label dark:text-gray-400">NUMBER OF ITEMS</p>
           <div className="flex items-center">
             <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="Min" />
-            <span className="px-4">To</span>
+            <span className="px-4 text-gray-400 dark:text-light-gray">To</span>
             <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="max" />
 
           </div>
@@ -57,7 +57,7 @@ function Filter() {
       {(setIsOpen) => ({
         content: <FilterContent setIsOpen={setIsOpen} />,
         button: (
-          <Button onClick={() => setIsOpen(true)}>
+          <Button className="mx-2" onClick={() => setIsOpen(true)}>
             <img src="/icons/filter.svg" alt="filter" />
             Filters
           </Button>

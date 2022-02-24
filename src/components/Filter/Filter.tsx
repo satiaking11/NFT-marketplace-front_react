@@ -2,6 +2,7 @@ import React, { Dispatch, SetStateAction } from 'react';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Modal from '../Modal';
+import './Filter.sass';
 
 type Props = {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -11,9 +12,9 @@ function FilterContent({
   setIsOpen,
 }: Props) {
   return (
-    <div className="max-w-[600px] w-full bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6">
+    <div className="max-w-[514px] w-full bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6">
       <div className="flex items-start justify-between mb-4">
-        <p className="text-2xl font-bold">Connect your wallet</p>
+        <p className="text-2xl font-bold">Filters</p>
         <button
           type="button"
           className="h-auto"
@@ -22,23 +23,29 @@ function FilterContent({
           <Icon name="x" className="stroke-current" />
         </button>
       </div>
-      <p>Connect with one of available wallet providers or create a new wallet.</p>
-      <a href="/" className="text-link">What is wallet?</a>
+      <form>
+        <div className="form-group">
+          <p className="label dark:text-gray-400">ARTIST NICKNAME</p>
+          <input type="text" className="form-control dark:bg-[#2A2A32]" placeholder="e.g 'Albert'" />
+        </div>
+        <div className="form-group">
+          <p className="label dark:text-gray-400">NUMBER OF ITEMS</p>
+          <div className="flex items-center">
+            <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="Min" />
+            <span className="px-4">To</span>
+            <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="max" />
 
-      <div className="flex flex-col gap-y-4 mt-8 mb-4">
-        {['Nami Wallet', 'CCVault', 'Gero Wallet'].map((item, index) => (
-          <button type="button" key={item} className="w-full flex items-center p-3 px-4 border rounded-xl h-auto hover:bg-gray-100">
-            <img src={`/icons/wallet/${index + 1}.png`} alt="" className="mr-4" />
-            Connect with
-            {' '}
-            {item}
-          </button>
+          </div>
+        </div>
+        <div className="form-group">
+          <p className="label dark:text-gray-400">FLOOR PRICE (ADA)</p>
+          <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="e.g 0.1" />
+        </div>
+      </form>
+      <div className="flex justify-between">
+        <Button className="text-white rounded-full px-8" color="primary">Apply Filter</Button>
+        <Button className="rounded-full px-8 border-none hover:bg-transparent hover:text-black-900">Clear All</Button>
 
-        ))}
-      </div>
-      <p className="mb-6">We do not own your private keys and cannot access your funds without your confirmation.</p>
-      <div className="flex justify-center">
-        <a href="/" className="text-primary dark:text-link text-lg">Sort</a>
       </div>
     </div>
   );

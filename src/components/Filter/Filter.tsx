@@ -34,7 +34,6 @@ function FilterContent({
             <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="Min" />
             <span className="px-4 text-gray-400 dark:text-light-gray">To</span>
             <input type="text" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="max" />
-
           </div>
         </div>
         <div className="form-group">
@@ -45,7 +44,6 @@ function FilterContent({
       <div className="flex justify-between">
         <Button className="text-white rounded-full px-8" color="primary">Apply Filter</Button>
         <Button className="rounded-full px-8 border-none hover:bg-transparent hover:text-black-900">Clear All</Button>
-
       </div>
     </div>
   );

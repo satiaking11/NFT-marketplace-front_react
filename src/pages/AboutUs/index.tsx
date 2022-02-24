@@ -47,13 +47,6 @@ function AboutUs() {
               <input type="text" className="w-full rounded-2xl px-4" placeholder="example@mail.com" />
             </div>
             <div className="flex justify-center mt-8 flex-col">
-              {/* <button
-                type="button"
-                className="bg-primary text-white rounded-full px-8"
-              >
-
-                Submit a request
-              </button> */}
               <Button className="text-white rounded-full px-8" color="primary">Submit a request</Button>
               <p className="text-center text-light-gray mt-10 mb-10">or</p>
               <div className="flex items-center justify-center gap-x-8">

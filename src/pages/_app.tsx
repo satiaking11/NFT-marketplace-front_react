@@ -4,9 +4,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
 import Topbar from '../components/Topbar/Topbar';
 import { RootState } from '../store';
-import AboutUs from './AboutUs/index';
-import Home from './Home/index';
-import Artists from './Artists/index';
+import AboutUs from './AboutUs';
+import Home from './Home';
+import Artists from './Artists';
+import ArtistProfile from './Artists/profile';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -26,7 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/artists" element={<Artists />} />
-
+          <Route path="/artist-profile" element={<ArtistProfile />} />
         </Routes>
         <Footer />
       </BrowserRouter>

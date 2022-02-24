@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Button from '../Button/Button';
 import Card from '../Card/Card';
+import Icon from '../Icon/Icon';
 import LinkWithIcon from '../LinkWithIcon';
 import SectionTitle from './Title';
 
@@ -32,6 +34,12 @@ function TrendingCollections() {
             </div>
           </Card>
         )))}
+      </div>
+      <div className="refresh flex justify-center my-10">
+        <Button>
+          <Icon name="refresh-cw" className="stroke-current" />
+          Load More
+        </Button>
       </div>
     </section>
   );

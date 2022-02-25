@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from './Title';
-import ButtonSort from '../Sort/Sort';
 import ButtonFilter from '../Filter/Filter';
 import ArtistCard from '../Card/ArtistCard';
 import Button from '../Button/Button';
@@ -13,7 +12,6 @@ function ArtistsList() {
       <div className="flex items-center justify-between">
         <SectionTitle>10,545 Artists</SectionTitle>
         <div className="flex items-center ">
-          <ButtonSort />
           <ButtonFilter />
         </div>
       </div>

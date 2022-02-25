@@ -67,7 +67,7 @@ function Home() {
         </section>
         <ExploreCategories />
         <FeaturedArtists />
-        <TrendingNFTs />
+        <TrendingNFTs withMenu />
         <TrendingCollections />
         <WhyChooseUs withLabel withMoreDetails />
       </div>

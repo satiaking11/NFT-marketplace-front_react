@@ -8,7 +8,7 @@ function FeaturedArtists() {
     <section className="explore-categories mb-36">
       <div className="mb-6 flex items-center justify-between">
         <SectionTitle>Featured Artists</SectionTitle>
-        <LinkWithIcon href="/">Explore all</LinkWithIcon>
+        <LinkWithIcon href="/artists">Explore all</LinkWithIcon>
       </div>
       <div className="bg-light-red dark:text-white dark:bg-[#24284D] h-[534px] py-10 pl-10 flex items-center justify-between">
         <div className="max-w-[331px] w-full h-full text-center flex flex-col">

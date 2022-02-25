@@ -25,10 +25,10 @@ function Card({
 
   return (
     <div
-      className="card bg-white dark:bg-black-900 rounded-3xl overflow-hidden shadow-card flex flex-col"
+      className="group card bg-white dark:bg-black-900 rounded-3xl overflow-hidden shadow-card flex flex-col"
       style={{ width }}
     >
-      <img src={cover} alt="" />
+      <img draggable="false" src={cover} alt="" />
       {avatar && (
         <div
           className="border-2 border-white dark:border-black rounded-full h-[123px] w-[123px] mx-auto -mt-20 overflow-hidden"

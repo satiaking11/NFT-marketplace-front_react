@@ -21,7 +21,7 @@ function Home() {
           </Link>
         </div>
         <ArtistProfile />
-        <TrendingNFTs />
+        <TrendingNFTs withSwiper />
         <TrendingCollections />
         <div className="flex items-center justify-between" />
       </div>

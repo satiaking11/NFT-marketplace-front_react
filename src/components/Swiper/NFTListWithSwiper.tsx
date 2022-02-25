@@ -10,13 +10,12 @@ function NFTListWithSwiper() {
 
       <div className="nft-list-swiper relative w-full flex gap-6 snap-x overflow-x-auto pb-14">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-          <div className="snap-center flex">
+          <div key={item} className="snap-center flex">
             <Card
-              key={item}
               cover={`/images/nft-cover/trending/${item}.png`}
             >
               <div className="card-details px-8 py-6">
-                <p className="text-2xl mb-1">NFT namssdae</p>
+                <p className="text-2xl mb-1">NFT name</p>
                 <p className="mb-2">
                   Collection name could be so long and a little bit longer
                 </p>

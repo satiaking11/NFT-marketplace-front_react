@@ -4,7 +4,7 @@ import BuyNow from '../BuyNow/BuyNow';
 import Card from '../Card/Card';
 import './HideScrollbars.sass';
 
-function TrendingNFTs() {
+function NFTListWithSwiper() {
   return (
     <section className="mb-36">
 
@@ -38,4 +38,4 @@ function TrendingNFTs() {
   );
 }
 
-export default TrendingNFTs;
+export default NFTListWithSwiper;

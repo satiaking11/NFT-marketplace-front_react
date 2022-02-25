@@ -35,6 +35,7 @@ function NFTList() {
     </div>
   );
 }
+
 function TrendingNFTs(
   {
     withMenu = false,

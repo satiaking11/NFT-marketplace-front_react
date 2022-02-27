@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
+import Explore from '../Dropdown/Explore';
+import Resources from '../Dropdown/Resources';
 import Icon from '../Icon/Icon';
 import Logo from '../Logo/Logo';
 import SearchInput from '../SearchInput/SearchInput';
@@ -9,7 +11,7 @@ import './Topbar.sass';
 
 function Topbar() {
   return (
-    <div className="topbar container relative z-50">
+    <div className="topbar container w-full relative z-50">
       <div className="flex items-center">
         <div className="mr-4">
           <Link to="/">
@@ -21,7 +23,7 @@ function Topbar() {
       <div className="flex gap-x-10 flex-grow justify-end items-center">
         <ul className="flex gap-x-6">
           <li>
-            <Link to="/explore">Explore</Link>
+            <Explore />
           </li>
           <li>
             <Link to="/artists">Artists</Link>
@@ -30,7 +32,7 @@ function Topbar() {
             <Link to="/activity">Activity</Link>
           </li>
           <li>
-            <Link to="/resources">Resources</Link>
+            <Resources />
           </li>
         </ul>
         <button type="button">

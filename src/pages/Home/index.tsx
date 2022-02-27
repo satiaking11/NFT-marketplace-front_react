@@ -21,7 +21,7 @@ function Home() {
             <Button className="px-12 py-3 text-lg h-auto" color="primary">Explore NFTs</Button>
           </div>
           <div className="cards relative left-[-309px]">
-            <div className="relative z-50">
+            <div className="relative z-40">
               <Card
                 cover="/images/nft-cover/1.png"
                 avatar="/images/avatar/card.png"

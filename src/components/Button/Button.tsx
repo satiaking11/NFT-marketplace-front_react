@@ -25,7 +25,13 @@ function Button({
       </button>
     );
   }
-
+  if (color === 'default') {
+    return (
+      <button type={type} {...rest} className={classNames('h-0', className)}>
+        {children}
+      </button>
+    );
+  }
   return (
     <button type={type} {...rest} className={classNames('btn-light flex items-center gap-x-2 px-6 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-primary', className)}>
       {children}

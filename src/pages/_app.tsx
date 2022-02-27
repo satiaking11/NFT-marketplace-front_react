@@ -7,6 +7,7 @@ import { RootState } from '../store';
 import AboutUs from './AboutUs';
 import Home from './Home';
 import Artists from './Artists';
+import Explore from './Explore';
 import ArtistProfile from './Artists/profile';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/artists" element={<Artists />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/artist-profile" element={<ArtistProfile />} />
         </Routes>
         <Footer />

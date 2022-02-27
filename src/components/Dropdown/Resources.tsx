@@ -1,33 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useComponentVisible from '../../hooks/useComponentVisible';
 import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 
-function Sort() {
+function ResourcesDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
   return (
     <div className="relative">
-      <Button className="mx-2" onClick={() => { setIsOpen(true); setIsComponentVisible(true); }}>
-        <img src="/icons/sort.svg" alt="sort" />
-        Sort By
+      <Button color="default" className="flex" onClick={() => { setIsOpen(true); setIsComponentVisible(true); }}>
+        Resources
+        <Icon name="chevron-down" className="stroke-current dark:text-white ml-2" />
       </Button>
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-          <div className="shadow-card absolute right-1 top-[50px] w-[142px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-4 py-6 z-50">
+          <div className="shadow-card absolute right-1 top-10 w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6 z-50">
             <ul className="grid grid-rows-4 grid-flow-col gap-6">
               <li>
-                Lowest Price
+                <Link to="/help-center">Help Center</Link>
               </li>
               <li>
-                Highest Price
+                <Link to="/about-us">About Us</Link>
               </li>
               <li>
-                Most Recent
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
-                Oldest
+                <Link to="/about-us">Terms of Use</Link>
               </li>
             </ul>
           </div>
@@ -38,4 +40,4 @@ function Sort() {
   );
 }
 
-export default Sort;
+export default ResourcesDropdown;

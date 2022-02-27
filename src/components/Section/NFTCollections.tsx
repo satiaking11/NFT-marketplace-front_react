@@ -1,15 +1,17 @@
 /* eslint-disable max-len */
 import React from 'react';
 import Card from '../Card/Card';
-import LinkWithIcon from '../LinkWithIcon';
 import SectionTitle from './Title';
-import NFTListWithSwiper from '../Swiper/NFTListWithSwiper';
 import CategoriesMenu from '../Categories/Categrories';
+import ButtonFilter from '../Filter/Filter';
+import ButtonSort from '../Sort/Sort';
 
 type Props = {
   withMenu?: boolean
-  withSwiper?: boolean
   title?: string
+  withFilter?: boolean
+  withSort?: boolean
+
 }
 
 function NFTList() {
@@ -37,11 +39,12 @@ function NFTList() {
   );
 }
 
-function TrendingNFTs(
+function NFTCollections(
   {
     withMenu = false,
-    withSwiper = false,
     title = 'Trending NFTs',
+    withFilter = false,
+    withSort = false,
   }: Props,
 ) {
   return (
@@ -50,12 +53,23 @@ function TrendingNFTs(
       {withMenu && (
         <div className="flex items-center justify-between mb-6">
           <CategoriesMenu />
-          <LinkWithIcon href="/">Explore all</LinkWithIcon>
         </div>
       )}
-      {withSwiper ? <NFTListWithSwiper /> : <NFTList />}
+      <div className="flex items-center justify-between mb-4">
+        <SectionTitle>1,412,245 NFTs</SectionTitle>
+        <div className="flex items-center ">
+          {
+            withSort && (<ButtonSort />)
+          }
+          {
+            withFilter && (<ButtonFilter />)
+          }
+
+        </div>
+      </div>
+      <NFTList />
     </section>
   );
 }
 
-export default TrendingNFTs;
+export default NFTCollections;

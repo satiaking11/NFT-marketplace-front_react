@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import useComponentVisible from '../../hooks/useComponentVisible';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
@@ -7,9 +7,14 @@ import Icon from '../Icon/Icon';
 function ExploreDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
-    <div className="relative">
+    <div className="relative flex items-center">
       <Button color="default" className="flex" onClick={() => { setIsOpen(true); setIsComponentVisible(true); }}>
         Explore
         <Icon name="chevron-down" className="stroke-current dark:text-white ml-2" />
@@ -20,10 +25,10 @@ function ExploreDropdown() {
           <div className="shadow-card absolute right-1 top-10 w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6 z-50">
             <ul className="grid grid-rows-2 grid-flow-col gap-6">
               <li>
-                <Link to="/explore">NFTs</Link>
+                <Link to="/explore#NFTs">NFTs</Link>
               </li>
               <li>
-                <Link to="/explore">Collections</Link>
+                <Link to="/explore#Collections">Collections</Link>
               </li>
             </ul>
           </div>

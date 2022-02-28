@@ -10,8 +10,13 @@ function Filter() {
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    const { nickname } = e.target.elements;
-    console.log({ nickname: nickname.value });
+    const { nickname, min, max } = e.target.elements;
+
+    console.log({
+      nickname: nickname.value,
+      min: min.value,
+      max: max.value,
+    });
   }
 
   return (
@@ -37,7 +42,7 @@ function Filter() {
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <p className="label dark:text-gray-400">ARTIST NICKNAME</p>
-                <input type="text" id="artist-nickname" className="form-control dark:bg-[#2A2A32]" placeholder="e.g 'Albert'" />
+                <input type="text" id="nickname" className="form-control dark:bg-[#2A2A32]" placeholder="e.g 'Albert'" />
               </div>
               <div className="form-group">
                 <p className="label dark:text-gray-400">NUMBER OF ITEMS</p>

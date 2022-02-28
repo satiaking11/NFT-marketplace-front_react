@@ -3,8 +3,10 @@ import React from 'react';
 import Card from '../Card/Card';
 import SectionTitle from './Title';
 import CategoriesMenu from '../Categories/Categrories';
-import ButtonFilter from '../Filter/Filter';
+import ButtonFilter from '../Filter/ExploreFilter';
 import ButtonSort from '../Sort/Sort';
+import FilterTags from '../Filter/FilterTags';
+import Button from '../Button/Button';
 
 type Props = {
   withMenu?: boolean
@@ -67,6 +69,18 @@ function NFTCollections(
 
         </div>
       </div>
+      {
+        withFilter && (
+        <div className="flex items-center mb-8 gap-4">
+          <p className="mr-4 font-bold">Filters</p>
+          <FilterTags>Autumn Phillips</FilterTags>
+          <FilterTags>ADA: 1.45 - 345.00</FilterTags>
+          <FilterTags>On sale</FilterTags>
+          <Button color="default" className="text-link font-bold dark:text-white"> Clear All </Button>
+        </div>
+        )
+      }
+
       <NFTList />
     </section>
   );

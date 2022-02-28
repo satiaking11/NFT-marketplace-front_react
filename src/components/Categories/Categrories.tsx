@@ -10,7 +10,7 @@ function Categories() {
         <button
           key={item}
           type="button"
-          className={classNames('px-6 rounded-2xl h-[45px]', active === item ? 'btn-gradient text-white' : 'border border-primary text-primary dark:text-white dark:border-white color-primary hover:bg-primary hover:text-white')}
+          className={classNames('px-6 rounded-2xl h-[45px]', active === item ? 'border border-primary btn-gradient text-white' : 'border border-primary text-primary dark:text-white dark:border-white color-primary hover:bg-primary hover:text-white')}
           onClick={() => {
             setActive(item);
           }}

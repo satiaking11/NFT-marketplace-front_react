@@ -1,24 +1,30 @@
 /* eslint-disable max-len */
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React from 'react';
 
-function GroupButton() {
-  const [active, setActive] = useState('NFTs');
+type Props = {
+  title: string;
+  onItemClicked: React.MouseEventHandler<HTMLButtonElement>;
+  isActive: boolean;
+}
+
+function GroupButton(
+  {
+    title = '',
+    onItemClicked = () => console.error('You passed no action to the component'),
+    isActive = false,
+  }: Props,
+) {
   return (
-    <div className="flex items-center gap-x-2 border-[2px] rounded-[20px] border-[#194185] p-1">
-      {['NFTs', 'Collections'].map((item) => (
-        <button
-          key={item}
-          type="button"
-          className={classNames('px-6 rounded-2xl h-[45px]', active === item ? 'btn-gradient text-white' : 'text-primary dark:text-white color-primary hover:bg-primary hover:text-white')}
-          onClick={() => {
-            setActive(item);
-          }}
-        >
-          {item}
-        </button>
-      ))}
-    </div>
+
+    <button
+      type="button"
+      className={classNames('px-6 rounded-2xl h-[45px]', isActive ? 'btn-gradient text-white' : 'text-primary dark:text-white color-primary hover:bg-primary hover:text-white')}
+      onClick={onItemClicked}
+    >
+      {title}
+    </button>
+
   );
 }
 

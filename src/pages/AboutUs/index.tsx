@@ -3,6 +3,7 @@ import React from 'react';
 import WhyChooseUs from '../../components/Section/WhyChooseUs';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import Button from '../../components/Button/Button';
+import './index.sass';
 
 function AboutUs() {
   useScrollToTop();

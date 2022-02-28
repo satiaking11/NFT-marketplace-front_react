@@ -27,7 +27,7 @@ function Button({
   }
   if (color === 'default') {
     return (
-      <button type={type} {...rest} className={classNames('h-0', className)}>
+      <button type={type} {...rest} className={classNames('h-auto', className)}>
         {children}
       </button>
     );

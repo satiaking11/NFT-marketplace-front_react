@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable max-len */
 import React from 'react';
 import Card from '../Card/Card';
@@ -5,8 +6,9 @@ import SectionTitle from './Title';
 import CategoriesMenu from '../Categories/Categrories';
 import ButtonFilter from '../Filter/ExploreFilter';
 import ButtonSort from '../Sort/Sort';
-import FilterTags from '../Filter/FilterTags';
+// import FilterTags from '../Filter/FilterTags';
 import Button from '../Button/Button';
+import FilterTags from '../Filter/FilterTags';
 
 type Props = {
   withMenu?: boolean
@@ -49,6 +51,36 @@ function NFTCollections(
     withSort = false,
   }: Props,
 ) {
+  interface filterForm {
+    nickname: string;
+    min_max_value: string;
+    [key: string]: string;
+}
+  const [formValues, setFormValues] = React.useState<filterForm>();
+
+  function filterFormValues(formState:any) {
+    const formData = {
+      nickname: formState.nickname,
+      min_max_value: `ADA: ${formState.min} - ${formState.max}`,
+    };
+    setFormValues(formData);
+  }
+  const initialState = {
+    nickname: '',
+    min_max_value: '',
+  };
+
+  function clearAll() {
+    setFormValues(initialState);
+  }
+
+  interface Profile {
+    nickname: string;
+    min: string;
+    max:string
+    [key: string]: string;
+}
+
   return (
     <section className="explore-categories mb-36">
       <SectionTitle className="mb-4">{title}</SectionTitle>
@@ -64,19 +96,26 @@ function NFTCollections(
             withSort && (<ButtonSort />)
           }
           {
-            withFilter && (<ButtonFilter />)
+            withFilter && (<ButtonFilter onSubmit={filterFormValues} />)
           }
 
         </div>
       </div>
       {
-        withFilter && (
+        withFilter && formValues && (
         <div className="flex items-center mb-8 gap-4">
           <p className="mr-4 font-bold">Filters</p>
-          <FilterTags>Autumn Phillips</FilterTags>
-          <FilterTags>ADA: 1.45 - 345.00</FilterTags>
-          <FilterTags>On sale</FilterTags>
-          <Button color="default" className="text-link font-bold dark:text-white"> Clear All </Button>
+
+          {
+            Object.keys(formValues).length !== 0
+            && Object.keys(formValues).map((key: keyof Profile) => (
+              <FilterTags key={key}>
+                {formValues[key]}
+              </FilterTags>
+            ))
+          }
+
+          <Button color="default" onClick={() => clearAll()} className="text-link font-bold dark:text-white"> Clear All </Button>
         </div>
         )
       }

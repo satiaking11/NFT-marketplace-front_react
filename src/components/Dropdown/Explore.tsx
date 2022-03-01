@@ -1,8 +1,10 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import useComponentVisible from '../../hooks/useComponentVisible';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
+import DropdownLink from './DropdownLink';
 
 function ExploreDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -22,14 +24,19 @@ function ExploreDropdown() {
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-          <div className="shadow-card absolute right-1 top-10 w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6 z-50">
+          <div className="shadow-card absolute right-1 top-10 w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl py-6 z-50">
             <ul className="grid grid-rows-2 grid-flow-col gap-6">
-              <li>
-                <Link to="/explore#NFTs">NFTs</Link>
-              </li>
-              <li>
-                <Link to="/explore#Collections">Collections</Link>
-              </li>
+              {[{
+                name: 'NFts',
+                link: '/explore#NFTs',
+              },
+              {
+                name: 'Collections',
+                link: '/explore#Collections',
+              },
+              ].map(({ name, link }, index) => (
+                <DropdownLink key={index} link={link}>{name}</DropdownLink>
+              ))}
             </ul>
           </div>
           )}

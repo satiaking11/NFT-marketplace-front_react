@@ -1,8 +1,10 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import useComponentVisible from '../../hooks/useComponentVisible';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
+import DropdownLink from './DropdownLink';
 
 function ResourcesDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -22,20 +24,27 @@ function ResourcesDropdown() {
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-          <div className="shadow-card absolute right-1 top-10 w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6 z-50">
+          <div className="shadow-card absolute right-1 top-10 w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl py-6 z-50">
             <ul className="grid grid-rows-4 grid-flow-col gap-6">
-              <li>
-                <Link to="/help-center">Help Center</Link>
-              </li>
-              <li>
-                <Link to="/about-us">About Us</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link to="/about-us">Terms of Use</Link>
-              </li>
+              {[{
+                name: 'Help Center',
+                link: '/help-center',
+              },
+              {
+                name: 'About Us',
+                link: '/about-us',
+              },
+              {
+                name: 'Blog',
+                link: '/blog',
+              },
+              {
+                name: 'Terms of Use',
+                link: '/terms-of-use',
+              },
+              ].map(({ name, link }, index) => (
+                <DropdownLink key={index} link={link}>{name}</DropdownLink>
+              ))}
             </ul>
           </div>
           )}

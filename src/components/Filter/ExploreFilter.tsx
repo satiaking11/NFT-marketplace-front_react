@@ -4,21 +4,35 @@ import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import './Filter.sass';
 
-function Filter() {
+type Props = {
+  onSubmit : Function
+}
+function Filter({
+  onSubmit,
+}: Props) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [nickname, setNickname] = React.useState('');
+  const [min, setMin] = React.useState('');
+  const [max, setMax] = React.useState('');
+
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(true);
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    const { nickname, min, max } = e.target.elements;
-
-    console.log({
-      nickname: nickname.value,
-      min: min.value,
-      max: max.value,
-    });
+    const formData = {
+      nickname,
+      min,
+      max,
+    };
+    onSubmit(formData);
+    setIsOpen(false);
   }
 
+  function clearAll() {
+    setNickname('');
+    setMin('');
+    setMax('');
+  }
   return (
     <div className="relative">
       <Button className="mx-2" onClick={() => { setIsOpen(true); setIsComponentVisible(true); }}>
@@ -42,14 +56,14 @@ function Filter() {
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <p className="label dark:text-gray-400">ARTIST NICKNAME</p>
-                <input type="text" id="nickname" className="form-control dark:bg-[#2A2A32]" placeholder="e.g 'Albert'" />
+                <input type="text" id="nickname" className="form-control dark:bg-[#2A2A32]" placeholder="e.g 'Albert'" value={nickname} onChange={({ target }) => setNickname(target.value)} />
               </div>
               <div className="form-group">
                 <p className="label dark:text-gray-400">NUMBER OF ITEMS</p>
                 <div className="flex items-center">
-                  <input type="text" id="min" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="Min" />
+                  <input type="text" id="min" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="Min" value={min} onChange={({ target }) => setMin(target.value)} />
                   <span className="px-4 text-gray-400 dark:text-light-gray">To</span>
-                  <input type="text" id="max" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="max" />
+                  <input type="text" id="max" className="form-control max-w-[205px] dark:bg-[#2A2A32]" placeholder="max" value={max} onChange={({ target }) => setMax(target.value)} />
                 </div>
               </div>
               <div className="form-group">
@@ -58,7 +72,7 @@ function Filter() {
               </div>
               <div className="flex justify-between">
                 <Button type="submit" className="text-white rounded-full px-8" color="primary">Apply Filter</Button>
-                <Button className="rounded-full px-8 border-none hover:bg-transparent hover:text-black-900">Clear All</Button>
+                <Button onClick={() => clearAll()} className="rounded-full px-8 border-none hover:bg-transparent hover:text-black-900">Clear All</Button>
               </div>
             </form>
 

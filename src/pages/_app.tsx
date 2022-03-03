@@ -9,6 +9,7 @@ import Home from './Home';
 import Artists from './Artists';
 import Explore from './Explore';
 import ArtistProfile from './Artists/profile';
+import Collections from './Collections';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -30,6 +31,7 @@ function App() {
           <Route path="/artists" element={<Artists />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/artist-profile" element={<ArtistProfile />} />
+          <Route path="/collections" element={<Collections />} />
         </Routes>
         <Footer />
       </BrowserRouter>

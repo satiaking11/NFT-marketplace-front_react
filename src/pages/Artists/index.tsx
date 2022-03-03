@@ -6,7 +6,7 @@ import PageTitle from '../../components/PageTitle';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import ArtistsList from '../../components/Section/ArtistsList';
 
-function Home() {
+function Artist() {
   useScrollToTop();
 
   return (
@@ -20,4 +20,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Artist;

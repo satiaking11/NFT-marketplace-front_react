@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 import ExploreCategories from '../../components/Section/Categories';
@@ -22,20 +23,22 @@ function Home() {
           </div>
           <div className="cards relative left-[-309px]">
             <div className="relative z-40">
-              <Card
-                cover="/images/nft-cover/1.png"
-                avatar="/images/avatar/card.png"
-                size="lg"
-              >
-                <div className="card-details px-8 pt-4 pb-6">
-                  <p className="text-2xl mb-2">Collection name could be so long and a little bit longer</p>
-                  <p className="text-sm">
-                    by
-                    {' '}
-                    <span className="text-link">Kimberly Mastrangelo</span>
-                  </p>
-                </div>
-              </Card>
+              <Link to="/collections">
+                <Card
+                  cover="/images/nft-cover/1.png"
+                  avatar="/images/avatar/card.png"
+                  size="lg"
+                >
+                  <div className="card-details px-8 pt-4 pb-6">
+                    <p className="text-2xl mb-2">Collection name could be so long and a little bit longer</p>
+                    <p className="text-sm">
+                      by
+                      {' '}
+                      <span className="text-link">Kimberly Mastrangelo</span>
+                    </p>
+                  </div>
+                </Card>
+              </Link>
             </div>
             <div className="absolute -top-8 -right-[216px]">
               <Card

@@ -1,3 +1,5 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable no-prototype-builtins */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable max-len */
 import React from 'react';
@@ -51,35 +53,26 @@ function NFTCollections(
     withSort = false,
   }: Props,
 ) {
-  interface filterForm {
-    nickname: string;
-    min_max_value: string;
-    [key: string]: string;
-}
-  const [formValues, setFormValues] = React.useState<filterForm>();
-
+  const [nickname, setNickname] = React.useState('');
+  const [min, setMin] = React.useState('');
+  const [max, setMax] = React.useState('');
   function filterFormValues(formState:any) {
-    const formData = {
-      nickname: formState.nickname,
-      min_max_value: `ADA: ${formState.min} - ${formState.max}`,
-    };
-    setFormValues(formData);
+    setNickname(formState.nickname);
+    setMin(formState.min);
+    setMax(formState.max);
   }
-  const initialState = {
-    nickname: '',
-    min_max_value: '',
+  const handleChangedNickname = () => {
+    setNickname('');
   };
-
-  function clearAll() {
-    setFormValues(initialState);
-  }
-
-  interface Profile {
-    nickname: string;
-    min: string;
-    max:string
-    [key: string]: string;
-}
+  const handleChangedMinMax = () => {
+    setMin('');
+    setMax('');
+  };
+  const clearAll = () => {
+    setNickname('');
+    setMin('');
+    setMax('');
+  };
 
   return (
     <section className="explore-categories mb-36">
@@ -102,20 +95,31 @@ function NFTCollections(
         </div>
       </div>
       {
-        withFilter && formValues && (
+        withFilter && (nickname !== '' || min !== '' || max !== '') && (
         <div className="flex items-center mb-8 gap-4">
           <p className="mr-4 font-bold">Filters</p>
-
           {
-            Object.keys(formValues).length !== 0
-            && Object.keys(formValues).map((key: keyof Profile) => (
-              <FilterTags key={key}>
-                {formValues[key]}
+            nickname && (
+              <FilterTags handleChanged={handleChangedNickname}>
+                {nickname}
               </FilterTags>
-            ))
+            )
+          }
+          {
+            min && max && (
+              <FilterTags handleChanged={handleChangedMinMax}>
+                ADA:
+                {' '}
+                {min}
+                {' '}
+                -
+                {' '}
+                {max}
+              </FilterTags>
+            )
           }
 
-          <Button color="default" onClick={() => clearAll()} className="text-link font-bold dark:text-white"> Clear All </Button>
+          <Button color="default" onClick={clearAll} className="text-link font-bold dark:text-white"> Clear All </Button>
         </div>
         )
       }

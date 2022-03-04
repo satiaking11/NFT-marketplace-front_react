@@ -15,9 +15,8 @@ function CollectionsList() {
   return (
     <div className="flex justify-between">
       {[1, 2, 3].map(((item) => (
-        <Link to="/collections">
+        <Link key={item} to="/collections">
           <Card
-            key={item}
             size="lg"
             cover={`images/nft-cover/collections/${item}.png`}
             avatar={`images/avatar/collections/${item}.png`}

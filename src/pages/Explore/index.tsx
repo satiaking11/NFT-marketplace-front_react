@@ -25,10 +25,11 @@ function Home() {
                 {['NFTs', 'Collections'].map((item, index) => (
                   <GroupButton
                     key={index}
-                    title={item}
                     onItemClicked={() => setActive(item)}
                     isActive={active === item}
-                  />
+                  >
+                    {item}
+                  </GroupButton>
                 ))}
               </div>
             </div>

@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import React from 'react';
 
 type Props = {
-  title: string;
+  children: React.ReactNode;
   onItemClicked: React.MouseEventHandler<HTMLButtonElement>;
   isActive: boolean;
 }
 
 function GroupButton(
   {
-    title = '',
+    children = '',
     onItemClicked = () => console.error('You passed no action to the component'),
     isActive = false,
   }: Props,
@@ -22,7 +22,7 @@ function GroupButton(
       className={classNames('px-6 rounded-2xl h-[45px]', isActive ? 'btn-gradient text-white' : 'text-primary dark:text-white color-primary hover:bg-primary hover:text-white')}
       onClick={onItemClicked}
     >
-      {title}
+      {children}
     </button>
 
   );

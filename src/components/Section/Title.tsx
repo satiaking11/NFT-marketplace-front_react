@@ -8,7 +8,7 @@ type Props = {
 
 function SectionTitle({ children, className = '' }: Props) {
   return (
-    <p className={classNames('text-2xl font-semibold', className)}>{children}</p>
+    <p className={classNames('md:text-2xl text-[22px] font-semibold', className)}>{children}</p>
   );
 }
 

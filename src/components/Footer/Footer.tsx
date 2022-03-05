@@ -27,7 +27,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex items-center justify-between py-12">
+      <div className="flex flex-col md:flex-row items-center justify-between py-12">
         <p>© Company name, Inc. 2022. We love our users!</p>
         <div className="flex items-center gap-x-8">
           <p>Follow us:</p>

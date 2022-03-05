@@ -11,16 +11,16 @@ import './Topbar.sass';
 
 function Topbar() {
   return (
-    <div className="topbar container w-full relative z-50">
+    <div className="flex topbar container w-full relative z-50">
       <div className="flex items-center">
         <div className="mr-4">
           <Link to="/">
             <Logo />
           </Link>
         </div>
-        <SearchInput />
+        <SearchInput className="hidden md:flex" />
       </div>
-      <div className="flex gap-x-10 flex-grow justify-end items-center">
+      <div className="hidden md:flex gap-x-10 flex-grow justify-end items-center">
         <ul className="flex gap-x-6">
           <li>
             <Explore />

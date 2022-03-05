@@ -14,7 +14,7 @@ type Props = {
 
 function NFTList() {
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
         <Card
           key={item}
@@ -45,7 +45,7 @@ function TrendingNFTs(
   }: Props,
 ) {
   return (
-    <section className="explore-categories mb-36">
+    <section className="explore-categories overflow-hidden mb-36 p-[16px] md:p-0">
       <SectionTitle className="mb-4">{title}</SectionTitle>
       {withMenu && (
         <div className="flex items-center justify-between mb-6">

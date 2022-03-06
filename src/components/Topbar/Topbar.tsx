@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import Explore from '../Dropdown/Explore';
 import Resources from '../Dropdown/Resources';
@@ -11,15 +12,25 @@ import './Topbar.sass';
 
 function Topbar() {
   return (
-    <div className="flex topbar container w-full relative z-50">
+    <div className="flex topbar container w-full relative z-50 p-[16px] md:p-0">
+      <div className="flex justify-center">
+        <BurgerMenu />
+      </div>
       <div className="flex items-center">
         <div className="mr-4">
           <Link to="/">
             <Logo />
           </Link>
         </div>
-        <SearchInput className="hidden md:flex" />
+        <SearchInput className="w-full hidden md:flex" />
       </div>
+      <button className="md:hidden relative flex items-center mt-2" type="button">
+        <Icon name="bell" size={30} className="stroke-current dark:text-white" />
+        <span className="absolute top-[10px] right-[-2px] flex h-3 w-3">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 dark:bg-red-800 opacity-75" />
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-red-400 dark:bg-red-800" />
+        </span>
+      </button>
       <div className="hidden md:flex gap-x-10 flex-grow justify-end items-center">
         <ul className="flex gap-x-6">
           <li>
@@ -41,7 +52,6 @@ function Topbar() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 dark:bg-red-800 opacity-75" />
             <span className="relative inline-flex rounded-full h-3 w-3 bg-red-400 dark:bg-red-800" />
           </span>
-
         </button>
         <DarkModeSwitch />
         <Wallet />

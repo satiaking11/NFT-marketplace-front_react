@@ -6,7 +6,7 @@ import ExploreCategories from '../../components/Section/Categories';
 import FeaturedArtists from '../../components/Section/FeaturedArtists';
 import TrendingCollections from '../../components/Section/TrendingCollections';
 import TrendingNFTs from '../../components/Section/TrendingNFTs';
-// import WhyChooseUs from '../../components/Section/WhyChooseUs';
+import WhyChooseUs from '../../components/Section/WhyChooseUs';
 import useScrollToTop from '../../hooks/useScrollToTop';
 import './index.sass';
 
@@ -72,7 +72,7 @@ function Home() {
         <FeaturedArtists />
         <TrendingNFTs withMenu />
         <TrendingCollections />
-        {/* <WhyChooseUs withLabel withMoreDetails /> */}
+        <WhyChooseUs withLabel withMoreDetails />
       </div>
     </div>
   );

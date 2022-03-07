@@ -7,14 +7,14 @@ function CollectionsBanner() {
     <div
       className="group bg-transparent card dark:bg-black-900 rounded-3xl overflow-hidden flex flex-col mb-20 mt-4"
     >
-      <img draggable="false" src="/images/collections/bg-1.png" alt="" />
+      <img draggable="false" className="min-h-[245px] object-fill" src="/images/collections/bg-1.png" alt="" />
       <div
-        className="mx-12 border-2 border-white dark:border-black rounded-full h-[123px] w-[123px] -mt-20 overflow-hidden"
+        className="md:mx-12 mx-auto border-2 border-white dark:border-black rounded-full h-[123px] w-[123px] -mt-20 overflow-hidden"
       >
         <img src="/images/collections/1.png" alt="" className="h-[123px] w-[123px]" />
       </div>
-      <div className="max-w-[846px] mx-auto flex">
-        <div className="flex flex-col ml-10">
+      <div className="max-w-[846px] mx-auto flex flex-col md:flex-row">
+        <div className="flex flex-col md:ml-10">
           <p className="text-[48px] font-semibold mt-4">Collection name could be so long and a little bit longer</p>
           <p className="text-gray-400 dark:text-light-gray">
             Created by

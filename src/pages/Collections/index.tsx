@@ -15,8 +15,8 @@ function Collections() {
   const [active, setActive] = React.useState('Items');
 
   return (
-    <div className="artist-profile mt-12">
-      <div className="container">
+    <div className="collections mt-12">
+      <div className="container p-[16px] md:p-0">
         <div className="flex flex-row items-center">
           <Icon name="arrow-left" className="stroke-current dark:text-white mr-2" />
           <Link className="text-black-400 dark:text-white" to="/artists">
@@ -25,7 +25,7 @@ function Collections() {
         </div>
         <CollectionsBanner />
 
-        <div className="flex w-min mx-auto items-center gap-x-2 border-[2px] rounded-[20px] border-[#194185] p-1">
+        <div className="flex my-10 md:my-0 w-min mx-auto items-center gap-x-2 border-[2px] rounded-[20px] border-[#194185] p-1">
 
           {['Items', 'Activity'].map((item, index) => (
             <GroupButton

@@ -15,7 +15,7 @@ function ArtistsList() {
           <ButtonFilter />
         </div>
       </div>
-      <div className="my-12 grid grid-cols-3 gap-8">
+      <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(((item, index) => (
           <Link to="/artist-profile">
             <ArtistCard

@@ -23,7 +23,7 @@ function Filter() {
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-          <div className="border dark:border-0 absolute right-1 w-[514px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6">
+          <div className="border dark:border-0 absolute right-1 w-full w-[370px] md:w-[514px] bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6">
             <div className="flex items-start justify-between mb-4">
               <p className="text-2xl font-bold">Filters</p>
               <button

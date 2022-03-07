@@ -5,7 +5,7 @@ import SectionTitle from './Title';
 
 function FeaturedArtists() {
   return (
-    <section className="explore-categories mb-36 p-[16px] md:p-0">
+    <section className="explore-categories mb-36">
       <div className="mb-6 flex items-center justify-between">
         <SectionTitle>Featured Artists</SectionTitle>
         <LinkWithIcon href="/artists">Explore all</LinkWithIcon>

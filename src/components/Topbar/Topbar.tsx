@@ -13,7 +13,7 @@ import './Topbar.sass';
 function Topbar() {
   return (
     <div className="flex topbar container w-full relative z-50 p-[16px] md:p-0">
-      <div className="flex justify-center">
+      <div className="md:hidden flex justify-center">
         <BurgerMenu />
       </div>
       <div className="flex items-center">
@@ -22,7 +22,7 @@ function Topbar() {
             <Logo />
           </Link>
         </div>
-        <SearchInput className="w-full hidden md:flex" />
+        <SearchInput className="hidden md:block" />
       </div>
       <button className="md:hidden relative flex items-center mt-2" type="button">
         <Icon name="bell" size={30} className="stroke-current dark:text-white" />

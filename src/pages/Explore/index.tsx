@@ -50,7 +50,6 @@ function Home() {
            <div>
              <TrendingCollections title="Trending Collections of this week" />
              <TrendingCollections withMenu title="Categories" />
-
            </div>
            )
          }

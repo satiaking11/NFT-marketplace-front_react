@@ -3,9 +3,9 @@ import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import NFTCollections from './NFTCollections';
 
-function ArtistsList() {
+function ExploreList() {
   return (
-    <section className="artists-list">
+    <section className="artists-list p-[16px] md:p-0">
       <NFTCollections withMenu withSort withFilter title="Categories" />
       <div className="refresh flex justify-center my-10">
         <Button>
@@ -17,4 +17,4 @@ function ArtistsList() {
   );
 }
 
-export default ArtistsList;
+export default ExploreList;

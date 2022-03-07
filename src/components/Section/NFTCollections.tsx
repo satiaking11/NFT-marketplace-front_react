@@ -22,7 +22,7 @@ type Props = {
 
 function NFTList() {
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
         <Card
           key={item}
@@ -78,7 +78,7 @@ function NFTCollections(
     <section className="explore-categories mb-36">
       <SectionTitle className="mb-4">{title}</SectionTitle>
       {withMenu && (
-        <div className="flex items-center justify-between mb-6">
+        <div className="overflow-hidden flex items-center justify-between mb-6">
           <CategoriesMenu />
         </div>
       )}
@@ -96,7 +96,7 @@ function NFTCollections(
       </div>
       {
         withFilter && (nickname !== '' || min !== '' || max !== '') && (
-        <div className="flex items-center mb-8 gap-4">
+        <div className="inline-block items-center mb-8 gap-4">
           <p className="mr-4 font-bold">Filters</p>
           {
             nickname && (

@@ -13,6 +13,7 @@ function NFTListWithSwiper() {
           <div key={item} className="snap-center flex">
             <Card
               cover={`/images/nft-cover/trending/${item}.png`}
+              className="w-card-base"
             >
               <div className="card-details px-8 py-6">
                 <p className="text-2xl mb-1">NFT name</p>

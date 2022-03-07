@@ -2,8 +2,8 @@ import React from 'react';
 
 function SideStats() {
   return (
-    <div className="border-l border-[#D0D5DD] flex ml-10">
-      <ul className="ml-6 mt-4 grid grid-rows-3 grid-flow-col gap-8 place-content-center">
+    <div className="md:border-l border-[#D0D5DD] flex md:ml-10 mt-10 md:mt-0">
+      <ul className="md:ml-6 mt-4 grid md:grid-rows-3 md:grid-flow-row grid-flow-col gap-8 place-content-center">
         <li>
           <p className="text-3xl text-primary dark:text-white font-bold">100K</p>
           <p className="text-light-gray-400 dark:text-light-gray">items</p>

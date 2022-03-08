@@ -10,6 +10,7 @@ import Artists from './Artists';
 import Explore from './Explore';
 import ArtistProfile from './Artists/profile';
 import Collections from './Collections';
+import NFT from './NFT';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -32,6 +33,7 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/artist-profile" element={<ArtistProfile />} />
           <Route path="/collections" element={<Collections />} />
+          <Route path="/nft" element={<NFT />} />
         </Routes>
         <Footer />
       </BrowserRouter>

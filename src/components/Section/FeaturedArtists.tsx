@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 import LinkWithIcon from '../LinkWithIcon';
+import SideStats from '../SideStats/SideStats';
 import SectionTitle from './Title';
 
 function FeaturedArtists() {
@@ -19,20 +20,7 @@ function FeaturedArtists() {
             <p className="text-[26px] font-semibold mt-4">Stephanie Sharkey</p>
             <p className="text-light-gray-400 dark:text-light-gray mt-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
           </div>
-          <ul className="grid grid-cols-3 gap-4 mt-10 md:mt-0">
-            <li>
-              <p className="text-3xl font-bold">137</p>
-              <p className="text-light-gray-400 dark:text-light-gray">items</p>
-            </li>
-            <li>
-              <p className="text-3xl font-bold">4</p>
-              <p className="text-light-gray-400 dark:text-light-gray">collections</p>
-            </li>
-            <li>
-              <p className="text-3xl font-bold">0.12</p>
-              <p className="text-light-gray-400 dark:text-light-gray">floor price</p>
-            </li>
-          </ul>
+          <SideStats type="horizontal" />
         </div>
         <div className="flex mt-14 md:mt-0">
           <div className="scale-75 -mb-60 -mr-10 md:-mr-16">

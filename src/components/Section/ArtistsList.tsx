@@ -5,6 +5,7 @@ import ButtonFilter from '../Filter/Filter';
 import ArtistCard from '../Card/ArtistCard';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
+import SideStats from '../SideStats/SideStats';
 
 function ArtistsList() {
   return (
@@ -29,20 +30,7 @@ function ArtistsList() {
                   </div>
                   <p className="text-[26px] font-semibold mt-4">Stephanie Sharkey</p>
                   <p className="text-light-gray-400 dark:text-light-gray mt-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
-                  <ul className="grid grid-cols-3 gap-4 mt-12">
-                    <li>
-                      <p className="text-3xl font-bold">137</p>
-                      <p className="text-light-gray-400 dark:text-light-gray">items</p>
-                    </li>
-                    <li>
-                      <p className="text-3xl font-bold">4</p>
-                      <p className="text-light-gray-400 dark:text-light-gray">collections</p>
-                    </li>
-                    <li>
-                      <p className="text-3xl font-bold">0.12</p>
-                      <p className="text-light-gray-400 dark:text-light-gray">floor price</p>
-                    </li>
-                  </ul>
+                  <SideStats type="horizontal" />
                 </div>
 
               </div>

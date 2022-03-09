@@ -10,8 +10,6 @@ function Filter() {
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    const { nickname } = e.target.elements;
-    console.log({ nickname: nickname.value });
   }
 
   return (

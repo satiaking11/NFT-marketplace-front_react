@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import SectionTitle from './Title';
 import ButtonFilter from '../Filter/Filter';
 import ArtistCard from '../Card/ArtistCard';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
 import SideStats from '../SideStats/SideStats';
+import LoadMoreButton from '../Button/LoadMoreButton';
 
 function ArtistsList() {
   return (
@@ -38,12 +37,7 @@ function ArtistsList() {
           </Link>
         )))}
       </div>
-      <div className="refresh flex justify-center my-10">
-        <Button>
-          <Icon name="refresh-cw" className="stroke-current" />
-          Load More
-        </Button>
-      </div>
+      <LoadMoreButton />
     </section>
   );
 }

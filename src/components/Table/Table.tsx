@@ -30,7 +30,6 @@ function isPrimitive(value: any): value is PrimitiveType {
 /** Component */
 
 interface MinTableItem {
-  id: PrimitiveType;
 }
 
 type TableHeaders<T extends MinTableItem> = Record<keyof T, string>;
@@ -53,11 +52,17 @@ export default function Table<T extends MinTableItem>({ customRenderers, headers
           const customRenderer = customRenderers?.[itemProperty];
 
           if (customRenderer) {
-            return <td>{customRenderer(item)}</td>;
+            return <td className="border-t p-[15px]">{customRenderer(item)}</td>;
           }
 
           return (
-            <td>{isPrimitive(item[itemProperty]) ? item[itemProperty] : ''}</td>
+            <td className="border-t p-[15px]">
+              {isPrimitive(item[itemProperty]) ? item[itemProperty] : ''}
+              {' '}
+              {item[itemProperty]}
+              {' '}
+              1
+            </td>
           );
         })}
       </tr>
@@ -65,10 +70,10 @@ export default function Table<T extends MinTableItem>({ customRenderers, headers
   }
 
   return (
-    <table>
+    <table className="w-full text-left">
       <thead>
         {objectValues(headers).map((headerValue) => (
-          <th>{headerValue}</th>
+          <th className="text-light-gray-400 dark:text-light-gray text-[14px] uppercase font-normal p-[15px]">{headerValue}</th>
         ))}
       </thead>
       <tbody>{items.map(renderRow)}</tbody>

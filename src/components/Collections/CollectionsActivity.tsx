@@ -146,7 +146,7 @@ function CollectionsActivity() {
         customRenderers={{
           event: (it) => (
             <div className="flex">
-              <Icon name={it.event.icon} className="mr-3" />
+              <Icon color="#667085" name={it.event.icon} className="mr-3" />
               <p>{it.event.name}</p>
             </div>
           ),

@@ -42,9 +42,12 @@ interface TableProps<T extends MinTableItem> {
   items: T[];
   headers: TableHeaders<T>;
   customRenderers?: CustomRenderers<T>;
+  withBorder?: boolean
 }
 
-export default function Table<T extends MinTableItem>({ customRenderers, headers, items }: TableProps<T>) {
+export default function Table<T extends MinTableItem>({
+  customRenderers, headers, items, withBorder,
+}: TableProps<T>) {
   function renderRow(item: T) {
     return (
       <tr>
@@ -52,11 +55,11 @@ export default function Table<T extends MinTableItem>({ customRenderers, headers
           const customRenderer = customRenderers?.[itemProperty];
 
           if (customRenderer) {
-            return <td className="border-t p-[15px]">{customRenderer(item)}</td>;
+            return <td className={withBorder ? 'border-t p-[15px]' : 'p-[15px]'}>{customRenderer(item)}</td>;
           }
 
           return (
-            <td className="border-t p-[15px]">
+            <td className={withBorder ? 'border-t p-[15px]' : 'p-[15px]'}>
               {isPrimitive(item[itemProperty]) ? item[itemProperty] : ''}
               {' '}
               {item[itemProperty]}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from './Title';
 import ButtonFilter from '../Filter/Filter';
-import ArtistCard from '../Card/ArtistCard';
+import DefaultCard from '../Card/DefaultCard';
 import SideStats from '../SideStats/SideStats';
 import LoadMoreButton from '../Button/LoadMoreButton';
 
@@ -18,11 +18,11 @@ function ArtistsList() {
       <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(((item, index) => (
           <Link to="/artist-profile">
-            <ArtistCard
+            <DefaultCard
               key={item}
-              size="lg"
+              className="w-card-lg"
             >
-              <div className="max-w-[331px] h-[532px] w-full text-center flex flex-col items-center mx-auto">
+              <div className="bg-light-gray-50 max-w-[331px] h-[532px] w-full text-center flex flex-col items-center mx-auto">
                 <div className="flex-grow">
                   <div className="rounded-full overflow-hidden h-[197px] w-[197px] mx-auto mt-8">
                     <img src={`/images/avatar/artists/${index + 1}.png`} alt="avatar" />
@@ -33,7 +33,7 @@ function ArtistsList() {
                 </div>
 
               </div>
-            </ArtistCard>
+            </DefaultCard>
           </Link>
         )))}
       </div>

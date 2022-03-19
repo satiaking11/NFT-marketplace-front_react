@@ -1,6 +1,7 @@
-import Button from "../Button/Button";
+import React from 'react';
+import Button from '../Button/Button';
 
-const ContactUs = () => {
+function ContactUs() {
   return (
     <section className="bg-light-violet py-12">
       <div className="form-container ml-[16px] mr-[16px] md:max-w-[450px] md:mx-[auto]  ">
@@ -52,6 +53,6 @@ const ContactUs = () => {
       </div>
     </section>
   );
-};
+}
 
 export default ContactUs;

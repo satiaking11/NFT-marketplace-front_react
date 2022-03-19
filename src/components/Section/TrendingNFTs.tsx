@@ -7,19 +7,16 @@ import NFTListWithSwiper from '../Swiper/NFTListWithSwiper';
 import CategoriesMenu from '../Categories/Categrories';
 
 type Props = {
-  withMenu?: boolean
-  withSwiper?: boolean
-  title?: string
-}
+  withMenu?: boolean;
+  withSwiper?: boolean;
+  title?: string;
+};
 
 function NFTList() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-        <Card
-          key={item}
-          cover={`/images/nft-cover/trending/${item}.png`}
-        >
+        <Card key={item} cover={`/images/nft-cover/trending/${item}.png`}>
           <div className="card-details px-8 py-6">
             <p className="text-2xl mb-1">NFT name</p>
             <p className="mb-2">
@@ -27,7 +24,6 @@ function NFTList() {
             </p>
             <p className="text-red-400 dark:text-red-800 text-lg">
               <span className="font-bold">120</span>
-              {' '}
               ADA
             </p>
           </div>
@@ -37,13 +33,11 @@ function NFTList() {
   );
 }
 
-function TrendingNFTs(
-  {
-    withMenu = false,
-    withSwiper = false,
-    title = 'Trending NFTs',
-  }: Props,
-) {
+function TrendingNFTs({
+  withMenu = false,
+  withSwiper = false,
+  title = 'Trending NFTs',
+}: Props) {
   return (
     <section className="explore-categories overflow-hidden mb-36 p-[16px] md:p-0">
       <SectionTitle className="mb-4">{title}</SectionTitle>

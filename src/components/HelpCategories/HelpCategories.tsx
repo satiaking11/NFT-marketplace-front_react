@@ -1,22 +1,22 @@
 /* eslint-disable max-len */
-import { useState } from "react";
-import classNames from "classnames";
-import "./HideScrollbars.sass";
+import React, { useState } from 'react';
+import classNames from 'classnames';
+import './HideScrollbars.sass';
 
 function HelpCategories() {
-  const [active, setActive] = useState("General");
+  const [active, setActive] = useState('General');
   return (
     <div className="help-categories flex items-center gap-x-10 mb-10 overflow-x-auto">
-      {["General", "Wallets", "Getting started", "Popular questions"].map(
+      {['General', 'Wallets', 'Getting started', 'Popular questions'].map(
         (item) => (
           <button
             key={item}
             type="button"
             className={classNames(
-              "px-6 rounded-2xl h-[45px]",
+              'px-6 rounded-2xl h-[45px]',
               active === item
-                ? "border border-primary btn-gradient text-white"
-                : "border border-primary text-primary dark:text-white dark:border-white color-primary hover:bg-primary hover:text-white"
+                ? 'border border-primary btn-gradient text-white'
+                : 'border border-primary text-primary dark:text-white dark:border-white color-primary hover:bg-primary hover:text-white',
             )}
             onClick={() => {
               setActive(item);
@@ -24,7 +24,7 @@ function HelpCategories() {
           >
             {item}
           </button>
-        )
+        ),
       )}
     </div>
   );

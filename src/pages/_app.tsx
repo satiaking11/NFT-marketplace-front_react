@@ -1,18 +1,18 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
-import Topbar from "../components/Topbar/Topbar";
-import { RootState } from "../store";
-import AboutUs from "./AboutUs";
-import Home from "./Home";
-import Artists from "./Artists";
-import Explore from "./Explore";
-import ArtistProfile from "./Artists/profile";
-import Collections from "./Collections";
-import NFT from "./NFT";
-import Activity from "./Activity";
-import HelpCenter from "./HelpCenter";
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
+import Topbar from '../components/Topbar/Topbar';
+import { RootState } from '../store';
+import AboutUs from './AboutUs';
+import Home from './Home';
+import Artists from './Artists';
+import Explore from './Explore';
+import ArtistProfile from './Artists/profile';
+import Collections from './Collections';
+import NFT from './NFT';
+import Activity from './Activity';
+import HelpCenter from './HelpCenter';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -20,8 +20,8 @@ function App() {
   useEffect(() => {
     const root = window.document.documentElement;
 
-    root.classList.remove(darkMode ? "light" : "dark");
-    root.classList.add(darkMode ? "dark" : "light");
+    root.classList.remove(darkMode ? 'light' : 'dark');
+    root.classList.add(darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
   return (

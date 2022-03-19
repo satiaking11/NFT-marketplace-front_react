@@ -1,21 +1,22 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import Icon from "../../components/Icon/Icon";
-import { RootState } from "../../store";
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import Icon from '../Icon/Icon';
+import { RootState } from '../../store';
 
 type Props = {
   question: String;
   answer: String;
 };
 
-const Accordian = ({ question = "", answer = "" }: Props) => {
+function Accordian({ question = '', answer = '' }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const { darkMode } = useSelector((state: RootState) => state.settings);
 
   return (
     <div className="accordian mb-6">
       <h2
-        type="button"
         className="flex mb-5 cursor-pointer items-center text-black-400 dark:text-white"
         onClick={() => {
           setIsOpen(!isOpen);
@@ -24,14 +25,14 @@ const Accordian = ({ question = "", answer = "" }: Props) => {
         {!isOpen ? (
           <Icon
             name="plus"
-            color={darkMode ? "#FFFFFF" : "#000000"}
+            color={darkMode ? '#FFFFFF' : '#000000'}
             className="mr-7"
           />
         ) : (
           <Icon
             name="minus"
             className="mr-7"
-            color={darkMode ? "#FFFFFF" : "#000000"}
+            color={darkMode ? '#FFFFFF' : '#000000'}
           />
         )}
         <p>{question}</p>
@@ -43,6 +44,6 @@ const Accordian = ({ question = "", answer = "" }: Props) => {
       )}
     </div>
   );
-};
+}
 
 export default Accordian;

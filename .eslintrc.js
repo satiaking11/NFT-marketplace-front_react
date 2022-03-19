@@ -40,6 +40,6 @@ module.exports = {
         tsx: 'never',
       },
     ],
-
+    // quotes: [0, "single", { avoidEscape: true }],
   },
 };

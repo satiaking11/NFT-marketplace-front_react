@@ -1,7 +1,9 @@
-import useScrollToTop from "../../hooks/useScrollToTop";
-import PageTitle from "../../components/PageTitle";
-import FrequetQeustions from "../../components/Section/FrequentQuestions";
-import ContactUs from "../../components/Section/ContactUs";
+import React from 'react';
+import useScrollToTop from '../../hooks/useScrollToTop';
+import PageTitle from '../../components/PageTitle';
+
+import ContactUs from '../../components/Section/ContactUs';
+import FrequentQeustions from '../../components/Section/FrequentQuestions';
 
 function HelpCenter() {
   useScrollToTop();
@@ -13,7 +15,7 @@ function HelpCenter() {
         <p className="text-light-gray-400 text-[18px] mb-9">
           These are the most frequent ask questions.
         </p>
-        <FrequetQeustions />
+        <FrequentQeustions />
       </div>
       <ContactUs />
     </div>

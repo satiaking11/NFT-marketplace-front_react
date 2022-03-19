@@ -18,9 +18,7 @@ function Accordian({ question = '', answer = '' }: Props) {
     <div className="accordian mb-6">
       <h2
         className="flex mb-5 cursor-pointer items-center text-black-400 dark:text-white"
-        onClick={() => {
-          setIsOpen(!isOpen);
-        }}
+        onClick={() => setIsOpen(!isOpen)}
       >
         {!isOpen ? (
           <Icon

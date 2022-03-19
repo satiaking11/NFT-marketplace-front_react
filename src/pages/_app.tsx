@@ -13,6 +13,8 @@ import Collections from './Collections';
 import NFT from './NFT';
 import Activity from './Activity';
 import HelpCenter from './HelpCenter';
+import Preposition from './Preposition';
+import Bids from './Bids';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -38,6 +40,8 @@ function App() {
           <Route path="/nft" element={<NFT />} />
           <Route path="/activity" element={<Activity />} />
           <Route path="/help-center" element={<HelpCenter />} />
+          <Route path="/preposition" element={<Preposition />} />
+          <Route path="/Bids" element={<Bids />} />
         </Routes>
         <Footer />
       </BrowserRouter>

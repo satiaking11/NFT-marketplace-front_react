@@ -2,7 +2,7 @@ import React from 'react';
 import Accordian from '../Accordin/Accordian';
 import HelpCategories from '../HelpCategories/HelpCategories';
 
-function FrequentQeustions() {
+function FrequentQuestions() {
   return (
     <section className="faq mb-10">
       <HelpCategories />
@@ -56,4 +56,4 @@ function FrequentQeustions() {
   );
 }
 
-export default FrequentQeustions;
+export default FrequentQuestions;

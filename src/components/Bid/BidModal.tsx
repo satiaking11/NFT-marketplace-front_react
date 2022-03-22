@@ -1,9 +1,11 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { Dispatch, SetStateAction, useState } from 'react';
+import { useSelector } from 'react-redux';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Modal from '../Modal';
 import PageTitle from '../PageTitle';
+import { RootState } from '../../store';
 
 type Props = {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -64,6 +66,8 @@ type SuccessBidProps = {
 };
 
 function SuccessBidContent({ setIsSuccess, setIsOpen }: SuccessBidProps) {
+  const { darkMode } = useSelector((state: RootState) => state.settings);
+
   return (
     <div className="max-w-[600px] w-full bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6">
       <div className="flex items-end justify-end mb-10 items-center">
@@ -80,7 +84,9 @@ function SuccessBidContent({ setIsSuccess, setIsOpen }: SuccessBidProps) {
       </div>
       <div className="flex flex-col items-center mb-20">
         <PageTitle>Congratulations!</PageTitle>
-        <img src="/images/check-white-1.png" alt="success" />
+        {darkMode && <img src="/images/dark-check-white.svg" alt="success" />}
+        {!darkMode && <img src="/images/check-white-1.png" alt="success" />}
+
         <p className="text-light-gray-400">Your NFT has been sold!</p>
       </div>
     </div>

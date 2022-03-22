@@ -15,6 +15,7 @@ import Activity from './Activity';
 import HelpCenter from './HelpCenter';
 import Preposition from './Preposition';
 import Bids from './Bids';
+import PageNotFound from './PageNotFound';
 
 function App() {
   const { darkMode } = useSelector((state: RootState) => state.settings);
@@ -42,6 +43,7 @@ function App() {
           <Route path="/help-center" element={<HelpCenter />} />
           <Route path="/preposition" element={<Preposition />} />
           <Route path="/Bids" element={<Bids />} />
+          <Route path="/404" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

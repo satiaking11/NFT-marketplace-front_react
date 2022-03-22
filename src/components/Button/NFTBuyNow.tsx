@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Button from './Button';
+import MakeABidModal from '../Bid/MakeABidModal';
+// import Button from './Button';
 
 function NFTBuyNow() {
   return (
@@ -9,14 +10,19 @@ function NFTBuyNow() {
         <p className="text-[16px] text-gray-400 dark:text-light-gray">Price</p>
         <p className="text-[24px] text-red-400 dark:text-red-800">
           <b>289</b>
-          {' '}
           ADA
-          <span className="ml-3 text-[16px] text-gray-400 dark:text-light-gray">($300.34)</span>
+          <span className="ml-3 text-[16px] text-gray-400 dark:text-light-gray">
+            ($300.34)
+          </span>
         </p>
       </div>
-      <Button className="py-2 px-12 text-[16px] h-[64px] md:h-full" color="primary">
+      <MakeABidModal />
+      {/* <Button
+        className="py-2 px-12 text-[16px] h-[64px] md:h-full"
+        color="primary"
+      >
         Buy Now
-      </Button>
+      </Button> */}
     </div>
   );
 }

@@ -9,18 +9,18 @@ import Wallet from '../Wallet/Wallet';
 
 type Props = {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
-}
+};
 
-function BurgerMenuContent({
-  setIsOpen,
-}: Props) {
+function BurgerMenuContent({ setIsOpen }: Props) {
   return (
     <div className="w-full h-screen bg-white dark:bg-black-800 dark:text-white px-8 py-6">
       <div className="flex items-start justify-between mb-4">
         <button
           type="button"
           className="h-auto"
-          onClick={() => { setIsOpen(false); }}
+          onClick={() => {
+            setIsOpen(false);
+          }}
         >
           <Icon name="x" size={32} className="stroke-current" />
         </button>
@@ -28,34 +28,54 @@ function BurgerMenuContent({
       </div>
       <SearchInput />
       <div className="mt-8">
-        <p className="text-light-gray-400 dark:text-light-gray text-[16px] mb-5">Explore</p>
+        <p className="text-light-gray-400 dark:text-light-gray text-[16px] mb-5">
+          Explore
+        </p>
         <ul className="flex flex-col gap-y-6">
           <li>
-            <Link className="text-[20px]" to="/explore">NFTs</Link>
+            <Link className="text-[20px]" to="/explore">
+              NFTs
+            </Link>
           </li>
           <li>
-            <Link className="text-[20px]" to="/explore">Collections</Link>
+            <Link className="text-[20px]" to="/explore">
+              Collections
+            </Link>
           </li>
           <li>
-            <Link className="text-[20px]" to="/artists">Artists</Link>
+            <Link className="text-[20px]" to="/artists">
+              Artists
+            </Link>
           </li>
           <li>
-            <Link className="text-[20px]" to="/activity">Activity</Link>
+            <Link className="text-[20px]" to="/activity">
+              Activity
+            </Link>
           </li>
         </ul>
-        <p className="text-light-gray-400 dark:text-light-gray text-[16px] my-5">Resources</p>
+        <p className="text-light-gray-400 dark:text-light-gray text-[16px] my-5">
+          Resources
+        </p>
         <ul className="flex flex-col gap-y-6">
           <li>
-            <Link className="text-[20px]" to="/explore">Help Center</Link>
+            <Link className="text-[20px]" to="/explore">
+              Help Center
+            </Link>
           </li>
           <li>
-            <Link className="text-[20px]" to="/explore">About Us</Link>
+            <Link className="text-[20px]" to="/explore">
+              About Us
+            </Link>
           </li>
           <li>
-            <Link className="text-[20px]" to="/artists">Blog</Link>
+            <Link className="text-[20px]" to="/artists">
+              Blog
+            </Link>
           </li>
           <li>
-            <Link className="text-[20px]" to="/activity">Terms of Use</Link>
+            <Link className="text-[20px]" to="/activity">
+              Terms of Use
+            </Link>
           </li>
           <li className="flex">
             <p className="text-[20px] mr-4">Dark mode</p>

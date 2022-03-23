@@ -1,7 +1,13 @@
-import React, { Dispatch, SetStateAction } from 'react';
+/* eslint-disable react/no-array-index-key */
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import useComponentVisible from '../../hooks/useComponentVisible';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Modal from '../Modal';
+import DropdownLink from '../Dropdown/DropdownLink';
+import { RootState } from '../../store';
 
 type Props = {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -22,9 +28,7 @@ function WalletContent({ setIsOpen }: Props) {
           <Icon name="x" className="stroke-current" />
         </button>
       </div>
-      <p>
-        Connect with one of available wallet providers or create a new wallet.
-      </p>
+      <p>Connect with one of available wallet providers or create a new wallet.</p>
       <a href="/" className="text-link">
         What is wallet?
       </a>
@@ -36,19 +40,14 @@ function WalletContent({ setIsOpen }: Props) {
             key={item}
             className="w-full flex items-center p-3 px-4 border rounded-xl h-auto hover:bg-gray-100"
           >
-            <img
-              src={`/icons/wallet/${index + 1}.png`}
-              alt=""
-              className="mr-4"
-            />
+            <img src={`/icons/wallet/${index + 1}.png`} alt="" className="mr-4" />
             Connect with
             {item}
           </button>
         ))}
       </div>
       <p className="mb-6">
-        We do not own your private keys and cannot access your funds without
-        your confirmation.
+        We do not own your private keys and cannot access your funds without your confirmation.
       </p>
       <div className="flex justify-center">
         <a href="/" className="text-primary dark:text-link text-lg">
@@ -59,7 +58,7 @@ function WalletContent({ setIsOpen }: Props) {
   );
 }
 
-function Wallet() {
+function ConnectWallet() {
   return (
     <Modal>
       {(setIsOpen) => ({
@@ -72,6 +71,114 @@ function Wallet() {
         ),
       })}
     </Modal>
+  );
+}
+
+function WalletDropdown() {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
+  const { pathname } = useLocation();
+
+  const { darkMode } = useSelector((state: RootState) => state.settings);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  return (
+    <div className="relative">
+      <Button
+        onClick={() => {
+          setIsOpen(true);
+          setIsComponentVisible(true);
+        }}
+      >
+        <Icon name="briefcase" className="stroke-current" />
+        My Wallet
+      </Button>
+
+      {isOpen && (
+        <div ref={ref}>
+          {isComponentVisible && setIsOpen && (
+            <div className="shadow-card absolute right-0 top-[50px]  w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl py-6 z-50">
+              <ul className="grid grid-rows-4 grid-flow-col gap-6">
+                {[
+                  {
+                    name: 'Current Items',
+                    link: '/current-items',
+                  },
+                  {
+                    name: 'Latest Activity',
+                    link: '/activity',
+                  },
+                  {
+                    name: 'My Prepositions',
+                    link: '/prepositions',
+                    totalPrepositions: 3,
+                  },
+                  {
+                    name: 'Pending Bids',
+                    link: '/pending',
+                  },
+                ].map(({ name, link, totalPrepositions }, index) => (
+                  <DropdownLink key={index} link={link}>
+                    {darkMode && (
+                      <img
+                        src={`/icons/wallet/wallet-dropdown/white-${index + 1}.svg`}
+                        className="mr-3"
+                        alt="icons"
+                      />
+                    )}
+                    {!darkMode && (
+                      <img
+                        src={`/icons/wallet/wallet-dropdown/${index + 1}.svg`}
+                        className="mr-3"
+                        alt="icons"
+                      />
+                    )}
+                    {name}
+                    {totalPrepositions && (
+                      <span className="ml-4 font-semibold text-red-400">{totalPrepositions}</span>
+                    )}
+                  </DropdownLink>
+                ))}
+              </ul>
+              <hr className="my-7 dark:border-dark-gray-400" />
+              <p className="flex px-8">
+                {darkMode && (
+                  <img
+                    src="/icons/wallet/wallet-dropdown/white-5.svg"
+                    alt="disconnect wallet"
+                    className="mr-4 "
+                  />
+                )}
+                {!darkMode && (
+                  <img
+                    src="/icons/wallet/wallet-dropdown/5.svg"
+                    alt="disconnect wallet"
+                    className="mr-4 "
+                  />
+                )}
+                Disconnect Wallet
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Wallet() {
+  // dummy variable to check wallet connected or not
+  const isWalletConnected = true;
+
+  return (
+    <div>
+      {!isWalletConnected && <ConnectWallet />}
+
+      {isWalletConnected && <WalletDropdown />}
+    </div>
   );
 }
 

@@ -51,7 +51,7 @@ function BidContent({ setIsOpen, setIsSuccess }: Props) {
 
       <div className="flex justify-between">
         <p>
-          YOUR BID <span>*</span>
+          YOUR BID <span className="text-red-100">*</span>
         </p>
         <p>
           YOUR BALANCE: <span>2,350.42</span> <span>ADA</span>

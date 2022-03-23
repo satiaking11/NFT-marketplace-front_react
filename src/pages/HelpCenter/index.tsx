@@ -12,7 +12,7 @@ function HelpCenter() {
     <div className="help-page mt-12">
       <div className="container">
         <PageTitle className="mb-6">Help Center</PageTitle>
-        <p className="text-light-gray-400 text-[18px] mb-9">
+        <p className="text-light-gray-400 text-[18px] mb-9 dark:text-light-gray">
           These are the most frequent ask questions.
         </p>
         <FrequentQuestions />

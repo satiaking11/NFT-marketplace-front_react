@@ -21,23 +21,15 @@ function Accordian({ question = '', answer = '' }: Props) {
         onClick={() => setIsOpen(!isOpen)}
       >
         {!isOpen ? (
-          <Icon
-            name="plus"
-            color={darkMode ? '#FFFFFF' : '#000000'}
-            className="mr-7"
-          />
+          <Icon name="plus" color={darkMode ? '#FFFFFF' : '#000000'} className="mr-7" />
         ) : (
-          <Icon
-            name="minus"
-            className="mr-7"
-            color={darkMode ? '#FFFFFF' : '#000000'}
-          />
+          <Icon name="minus" className="mr-7" color={darkMode ? '#FFFFFF' : '#000000'} />
         )}
         <p>{question}</p>
       </h2>
       {isOpen && (
         <div className="content ml-12 border-l  border-link pl-6">
-          <p className="max-w-3xl text-light-gray-400">{answer}</p>
+          <p className="max-w-3xl text-light-gray-400 dark:text-light-gray">{answer}</p>
         </div>
       )}
     </div>

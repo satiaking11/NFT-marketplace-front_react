@@ -3,18 +3,16 @@ import Button from '../Button/Button';
 
 function ContactUs() {
   return (
-    <section className="bg-light-violet py-12">
+    <section className="bg-light-violet py-12 dark:bg-light-green">
       <div className="form-container ml-[16px] mr-[16px] md:max-w-[450px] md:mx-[auto]  ">
-        <h2 className="font-semibold text-[24px] text-center mb-4">
-          Can’t find your answer?
-        </h2>
-        <p className="text-center text-light-gray-400 mb-10">
+        <h2 className="font-semibold text-[24px] text-center mb-4">Can’t find your answer?</h2>
+        <p className="text-center text-light-gray-400 mb-10 dark:text-light-gray">
           Contact us and we’ll get back to you as soon as we can.
         </p>
 
         <form>
           <div className="form-group">
-            <p className="label dark:text-gray-400">YOUR NAME</p>
+            <p className="label  dark:text-light-gray">YOUR NAME</p>
             <input
               type="text"
               id="nickname"
@@ -23,7 +21,7 @@ function ContactUs() {
             />
           </div>
           <div className="form-group">
-            <p className="label dark:text-gray-400">EMAIL</p>
+            <p className="label  dark:text-light-gray">EMAIL</p>
             <input
               type="text"
               id="nickname"
@@ -32,7 +30,7 @@ function ContactUs() {
             />
           </div>
           <div className="form-group">
-            <p className="label dark:text-gray-400">ISSUE</p>
+            <p className="label  dark:text-light-gray">ISSUE</p>
             <input
               type="text"
               id="nickname"
@@ -41,11 +39,7 @@ function ContactUs() {
             />
           </div>
           <div className="flex justify-between">
-            <Button
-              type="submit"
-              className="text-white rounded-full px-8"
-              color="primary"
-            >
+            <Button type="submit" className="text-white rounded-full px-8" color="primary">
               Submit request
             </Button>
           </div>

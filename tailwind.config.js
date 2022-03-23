@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: '#194185',
         link: '#038AE4',
+        'link-dark': '#28A3F5',
         'primary-900': '#013EA6',
         'light-red': '#FFF5F5',
         'red-400': '#F24463',
@@ -27,6 +28,7 @@ module.exports = {
         'light-violet': '#F5F6FF',
         'light-blue': '#F8FFF5',
         'light-green': '#4F8439',
+        'red-100': '#E26262',
 
       },
       boxShadow: {

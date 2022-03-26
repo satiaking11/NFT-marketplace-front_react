@@ -31,22 +31,14 @@ function BidContent({ setIsOpen, setIsSuccess }: Props) {
         </button>
       </div>
       <p className="mb-8 dark:text-light-gray">
-        This item in not On Sale now, but you can make a bid and probobly owner
-        will sell it to you if you propose a good price.
+        This item in not On Sale now, but you can make a bid and probobly owner will sell it to you
+        if you propose a good price.
       </p>
-      <p className="mb-2 text-light-gray-400 dark:text-light-gray">
-        Highest price{' '}
-      </p>
+      <p className="mb-2 text-light-gray-400 dark:text-light-gray">Highest price </p>
       <div className="flex items-center mb-12 dark:text-light-gray">
-        <span className="text-primary font-bold text-2xl pr-1 dark:text-light-gray">
-          245
-        </span>
-        <span className="text-primary text-2xl mr-2 dark:text-light-gray">
-          ADA
-        </span>
-        <span className="text-light-gray-400 text-base dark:text-light-gray">
-          ($ 287.12)
-        </span>
+        <span className="text-primary font-bold text-2xl pr-1 dark:text-light-gray">245</span>
+        <span className="text-primary text-2xl mr-2 dark:text-light-gray">ADA</span>
+        <span className="text-light-gray-400 text-base dark:text-light-gray">($ 287.12)</span>
       </div>
 
       <div className="flex justify-between">
@@ -60,10 +52,7 @@ function BidContent({ setIsOpen, setIsSuccess }: Props) {
 
       <div className="mt-1 relative rounded-full shadow-sm  mb-2">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <span className=" sm:text-sm text-black-400 dark:text-white">
-            {' '}
-            ADA:{' '}
-          </span>
+          <span className=" sm:text-sm text-black-400 dark:text-white"> ADA: </span>
         </div>
         <input
           type="text"
@@ -88,8 +77,7 @@ function BidContent({ setIsOpen, setIsSuccess }: Props) {
           <Icon name="info" color={darkMode ? '#ffffff' : '#000000'} />
         </div>
         <p className="text-[12px] text-light-gray-400 dark:text-light-gray">
-          Total offer amount:{' '}
-          <span className="text-black-400 dark:text-light-gray">241 ADA</span>
+          Total offer amount: <span className="text-black-400 dark:text-light-gray">241 ADA</span>
         </p>
       </div>
 
@@ -117,7 +105,7 @@ function SuccessBidContent({ setIsSuccess, setIsOpen }: SuccessBidProps) {
   const { darkMode } = useSelector((state: RootState) => state.settings);
 
   return (
-    <div className="max-w-[600px] w-full bg-white dark:bg-black-800 dark:text-white rounded-3xl px-20 py-6">
+    <div className="max-w-[600px] w-full bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 md:px-20 py-6">
       <div className="flex items-end justify-end mb-10 items-center">
         <button
           type="button"
@@ -136,8 +124,8 @@ function SuccessBidContent({ setIsSuccess, setIsOpen }: SuccessBidProps) {
         {!darkMode && <img src="/images/check-white-1.png" alt="success" />}
 
         <p className="text-light-gray-400 dark:text-light-gray">
-          If owner accept your bid you will get a notification, if he didn’t
-          accept it in 3 days, you will get your money back.
+          If owner accept your bid you will get a notification, if he didn’t accept it in 3 days,
+          you will get your money back.
         </p>
       </div>
     </div>
@@ -150,10 +138,7 @@ function MakeABidModal() {
     <Modal>
       {(setIsOpen) => ({
         content: isSuccess ? (
-          <SuccessBidContent
-            setIsSuccess={setIsSuccess}
-            setIsOpen={setIsOpen}
-          />
+          <SuccessBidContent setIsSuccess={setIsSuccess} setIsOpen={setIsOpen} />
         ) : (
           <BidContent setIsSuccess={setIsSuccess} setIsOpen={setIsOpen} />
         ),

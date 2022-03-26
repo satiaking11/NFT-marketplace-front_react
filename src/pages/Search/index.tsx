@@ -14,7 +14,7 @@ function Search() {
   const isDataFound = false;
 
   return (
-    <div className="container mt-10 mb-[170px]">
+    <div className="container mt-10 mb-[170px] px-4 md:px-0">
       <PageTitle className="mb-6 text-light-gray-400 dark:white">
         Search results for
         <span className="text-black-400 dark:text-light-gray dark:font-semibold "> Meta</span>
@@ -45,7 +45,7 @@ function Search() {
       <div className="content">
         {active === 'NFTs' && (
           <div>
-            <NFTCollections withSort withFilter title="Categories" />
+            <NFTCollections withSort withFilter title="" />
           </div>
         )}
         {active === 'Collections' && (

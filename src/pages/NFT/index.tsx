@@ -70,7 +70,7 @@ function NFT() {
   return (
     <div className="nft-page">
       <div className="container">
-        <NftAvailability success />
+        <NftAvailability error />
         <ProductInfo />
         <div className="mt-8 flex flex-col md:flex-row gap-6 p-[16px] md:p-0">
           <div className="w-full md:w-[594px]">
@@ -78,17 +78,14 @@ function NFT() {
               <div className="w-full p-[24px] flex flex-col">
                 <p className="text-[24px] font-semibold">Details</p>
                 <p className="text-black-400 dark:text-light-gray  mt-4">
-                  Brushpops is a generative system inspired by Roy
-                  Lichtenstein’s iconic work, where a random hash determines the
-                  composition of a series of abstract brush strokes.
-                  Lichtenstein’s original work has separated the brushstrokes
-                  from their original context, and now we take another step in
-                  the same direction, and separate the artist from the work. The
-                  artist has to relinquish control, and set the work free, where
-                  only some loosely-predetermined rules and a hash number will
-                  determine the actual outcome. The Brushstroke was detached
-                  from the painting, and it’s now detached from the artist as
-                  well...
+                  Brushpops is a generative system inspired by Roy Lichtenstein’s iconic work, where
+                  a random hash determines the composition of a series of abstract brush strokes.
+                  Lichtenstein’s original work has separated the brushstrokes from their original
+                  context, and now we take another step in the same direction, and separate the
+                  artist from the work. The artist has to relinquish control, and set the work free,
+                  where only some loosely-predetermined rules and a hash number will determine the
+                  actual outcome. The Brushstroke was detached from the painting, and it’s now
+                  detached from the artist as well...
                 </p>
               </div>
             </DefaultCard>
@@ -107,11 +104,7 @@ function NFT() {
                   customRenderers={{
                     event: (it) => (
                       <div className="flex">
-                        <Icon
-                          color="#667085"
-                          name={it.event.icon}
-                          className="mr-3"
-                        />
+                        <Icon color="#667085" name={it.event.icon} className="mr-3" />
                         <p>{it.event.name}</p>
                       </div>
                     ),

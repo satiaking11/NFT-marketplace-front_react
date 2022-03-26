@@ -6,7 +6,7 @@ import SectionTitle from './Title';
 
 function FeaturedArtists() {
   return (
-    <section className="explore-categories mb-36">
+    <section className="explore-categories mb-36 md:px-[0px]">
       <div className="mb-6 flex items-center justify-between">
         <SectionTitle>Featured Artists</SectionTitle>
         <LinkWithIcon href="/artists">Explore all</LinkWithIcon>
@@ -18,15 +18,15 @@ function FeaturedArtists() {
               <img src="/images/avatar/stephanie.png" alt="" />
             </div>
             <p className="text-[26px] font-semibold mt-4">Stephanie Sharkey</p>
-            <p className="text-light-gray-400 dark:text-light-gray mt-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+            <p className="text-light-gray-400 dark:text-light-gray mt-4">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+            </p>
           </div>
           <SideStats type="horizontal" />
         </div>
         <div className="flex mt-14 md:mt-0">
           <div className="scale-75 -mb-60 -mr-10 md:-mr-16">
-            <Card
-              cover="/images/nft-cover/trending/1.png"
-            >
+            <Card cover="/images/nft-cover/trending/1.png">
               <div className="card-details md:px-8 md:py-4 px-3 py-2">
                 <p className="text-[8px] md:text-[16px]">NFT name</p>
                 <p className="text-[5px] text-light-gray-400 dark:text-light-gray md:text-[16px]">
@@ -34,16 +34,13 @@ function FeaturedArtists() {
                 </p>
                 <p className="text-red-400 dark:text-red-800 text-[6px] md:text-lg">
                   <span className="font-bold">120</span>
-                  {' '}
                   ADA
                 </p>
               </div>
             </Card>
           </div>
           <div className="relative z-40">
-            <Card
-              cover="/images/nft-cover/trending/2.png"
-            >
+            <Card cover="/images/nft-cover/trending/2.png">
               <div className="card-details md:px-8 md:py-4 px-4 py-2">
                 <p className="text-[10px] md:text-lg">NFT name</p>
                 <p className="text-[7px] text-light-gray-400 dark:text-light-gray md:text-[16px]">
@@ -51,16 +48,13 @@ function FeaturedArtists() {
                 </p>
                 <p className="text-red-400 dark:text-red-800 text-[8px] md:text-lg">
                   <span className="font-bold">120</span>
-                  {' '}
                   ADA
                 </p>
               </div>
             </Card>
           </div>
           <div className="scale-75 -mb-60 -ml-10 md:-ml-16">
-            <Card
-              cover="/images/nft-cover/trending/3.png"
-            >
+            <Card cover="/images/nft-cover/trending/3.png">
               <div className="card-details md:px-8 md:py-4 px-3 py-2">
                 <p className="text-[8px] md:text-[16px]">NFT name</p>
                 <p className="text-[5px] text-light-gray-400 dark:text-light-gray md:text-[16px]">
@@ -68,7 +62,6 @@ function FeaturedArtists() {
                 </p>
                 <p className="text-red-400 dark:text-red-800 text-[6px] md:text-lg">
                   <span className="font-bold">120</span>
-                  {' '}
                   ADA
                 </p>
               </div>

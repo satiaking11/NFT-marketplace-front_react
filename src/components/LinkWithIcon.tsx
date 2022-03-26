@@ -4,13 +4,15 @@ import Icon from './Icon/Icon';
 type Props = {
   href: string;
   children: React.ReactNode;
-}
+  className?: String;
+};
 
-function LinkWithIcon({ href, children }: Props) {
+function LinkWithIcon({ href, children, className }: Props) {
   return (
-
-    <div className="flex items-center text-link">
-      <a href={href} className="mr-3">{children}</a>
+    <div className={`flex items-center text-link ${className}`}>
+      <a href={href} className="mr-3">
+        {children}
+      </a>
       <Icon name="arrow-right" className="stroke-current relative -top-px" />
     </div>
   );

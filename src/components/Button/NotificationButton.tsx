@@ -34,10 +34,21 @@ function NotificationButton() {
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-            <DefaultCard className=" absolute w-full px-8 py-9 md:w-[500px] right-0 ">
-              <h1 className="font-bold text-black-400 mb-4 dark:text-white text-[24px]">
-                Last Updates
-              </h1>
+            <DefaultCard className=" absolute  px-8 py-9 w-[100vw] right-[-15px] top-[-12px]  md:w-[500px] md:w-full md:right-0 md:top-auto ">
+              <div className="flex justify-between items-center mb-4">
+                <h1 className="font-bold text-black-400  dark:text-white text-[24px]">
+                  Last Updates
+                </h1>
+                <button
+                  type="button"
+                  className="h-auto"
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                >
+                  <Icon name="x" className="stroke-current" />
+                </button>
+              </div>
               {[
                 {
                   name: 'Iva Ryan',
@@ -67,15 +78,15 @@ function NotificationButton() {
                     </div>
                     <img
                       src={`/images/nft-cover/${index + 1}.png`}
-                      className="rounded-lg  md:h-[70px] md:w-[70px]"
+                      className="rounded-lg  h-[70px] w-[70px]"
                       alt="nft item"
                     />
                   </div>
 
                   <div className="grow ">
-                    <p className="font-bold text-light-gray-400 dark:text-white">{item.name}</p>
-                    <div className="flex justify-between items-center">
-                      <p className="text-light-gray-400 dark:text-gray">{item.content}</p>
+                    <p className="font-bold text-black-400 dark:text-white text-sm">{item.name}</p>
+                    <div className="flex justify-between items-center mb-2">
+                      <p className="text-light-gray-400 dark:text-gray text-sm">{item.content}</p>
                       <div className="h-[10px] w-[10px] rounded-full bg-red-400 dark:bg-red-800" />
                     </div>
                     <p className="text-[12px] dark:text-dark-gray-400">{item.time}</p>

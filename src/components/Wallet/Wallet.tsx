@@ -100,7 +100,7 @@ function WalletDropdown() {
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-            <div className="shadow-card absolute right-0 top-[50px]  w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl py-6 z-50">
+            <div className="z-[99] shadow-card absolute right-0 top-[50px]  w-[249px] bg-white dark:bg-black-800 dark:text-white rounded-3xl py-6 z-50">
               <ul className="grid grid-rows-4 grid-flow-col gap-6">
                 {[
                   {
@@ -171,7 +171,7 @@ function WalletDropdown() {
 
 function Wallet() {
   // dummy variable to check wallet connected or not
-  const isWalletConnected = true;
+  const isWalletConnected = false;
 
   return (
     <div>

@@ -16,21 +16,21 @@ function NftAvailability({ success, error }: Props) {
 
   return (
     <div
-      className={`container py-4 px-10 mb-[32px] ${
+      className={`container py-4 px-4 md:px-10 mb-[32px] ${
         error && 'bg-light-red dark:bg-dark-red'
       } ${success && 'bg-light-blue dark:bg-light-green'}  `}
     >
-      <div className="flex justify-between items-center">
-        <div className="left grow">
-          <div className="max-w-[370px]">
+      <div className="flex flex-wrap md:flex-row md:justify-between md:items-center">
+        <div className={`left grow  w-[90%] order-1  md:mb-6 md:mb-0 ${isOpen && 'mb-4'}`}>
+          <div className=" md:max-w-[370px]">
             <h2 className="text-black-400 text-2xl font-bold mb-4 dark:text-white">
               Not available for SALE now
             </h2>
             {isOpen && (
               <>
                 <p className="text-light-gray-400 leading-6 mb-4 dark:text-light-gray">
-                  This NFT belongs to you, if you want to make it eligible for
-                  selling please turn on this switcher
+                  This NFT belongs to you, if you want to make it eligible for selling please turn
+                  on this switcher
                 </p>
                 <ToggleSwitch />
                 <p className="text-[13px] text-light-gray-400 dark:text-light-gray">
@@ -41,7 +41,7 @@ function NftAvailability({ success, error }: Props) {
           </div>
         </div>
         {error && (
-          <div className="right bg-white w-[35%] py-4 px-7 mr-[66px] dark:border dark:border-white dark:bg-transparent">
+          <div className="order-3 right bg-white w-full md:w-[35%] py-4 px-4 md:px-7 md:mr-[66px] dark:border dark:border-white dark:bg-transparent">
             <h4 className="text-xl text-black-400 mb-2 dark:text-white">
               You have
               <span className="fomt-semibold text-red-400"> 5 </span>
@@ -49,17 +49,17 @@ function NftAvailability({ success, error }: Props) {
             </h4>
             {isOpen && (
               <>
-                <h4 className="text-xl text-black-400 mb-11 dark:text-white">
+                <h4 className="text-xl text-black-400 mb-6 md:mb-11 dark:text-white">
                   The highest bid is
                   <span className="font-semibold text-400"> 245 </span>
                   ADA
-                  <span className="ml-2 text-light-gray-400 dark:text-light-gray">
+                  <span className="ml-2 text-light-gray-400 dark:text-light-gray text-[16px]">
                     ($284.17)
                   </span>
                 </h4>
 
-                <div className="flex justify-between items-center">
-                  <Button color="primary" className="px-7">
+                <div className="flex flex-col md:flex-row justify-between items-center">
+                  <Button color="primary" className="px-7 w-full md:auto mb-6">
                     Sell for 245 ADA
                   </Button>
 
@@ -77,21 +77,15 @@ function NftAvailability({ success, error }: Props) {
         )}
         {isOpen && (
           <div
-            className={`${isOpen && 'mb-auto'}`}
+            className={`order-2 w-[10%] ${isOpen && 'mb-auto'}`}
             onClick={() => setIsOpen(false)}
           >
-            <Icon
-              name="chevron-up"
-              className="stroke-current dark:text-white ml-2"
-            />
+            <Icon name="chevron-up" className="stroke-current dark:text-white ml-2" />
           </div>
         )}
         {!isOpen && (
-          <div onClick={() => setIsOpen(true)}>
-            <Icon
-              name="chevron-down"
-              className="stroke-current dark:text-white ml-2"
-            />
+          <div className="order-2 w-[10%]" onClick={() => setIsOpen(true)}>
+            <Icon name="chevron-down" className="stroke-current dark:text-white ml-2" />
           </div>
         )}
       </div>

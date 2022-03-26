@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Modal from '../Modal';
-import PageTitle from '../PageTitle';
 import { RootState } from '../../store';
 
 type Props = {
@@ -16,9 +15,7 @@ function BidContent({ setIsOpen, setIsSuccess }: Props) {
   return (
     <div className="max-w-[600px] w-full bg-white dark:bg-black-800 dark:text-white rounded-3xl px-8 py-6">
       <div className="flex items-start justify-between mb-10 items-center">
-        <p className="text-2xl font-bold ">
-          Are you sure that you want to sell this NFT?
-        </p>
+        <p className="text-2xl font-bold ">Are you sure that you want to sell this NFT?</p>
         <button
           type="button"
           className="h-auto"
@@ -37,10 +34,10 @@ function BidContent({ setIsOpen, setIsSuccess }: Props) {
         <span className="text-light-gray-400 text-base">($ 287.12)</span>
       </div>
 
-      <div className="flex">
+      <div className="flex flex-col md:flex-row items-center">
         <Button
           color="primary"
-          className="px-8 mr-10 "
+          className="px-8 md:mr-10 w-full md:w-auto"
           onClick={() => {
             setIsSuccess(true);
           }}
@@ -83,7 +80,7 @@ function SuccessBidContent({ setIsSuccess, setIsOpen }: SuccessBidProps) {
         </button>
       </div>
       <div className="flex flex-col items-center mb-20">
-        <PageTitle>Congratulations!</PageTitle>
+        <h1 className="text-4xl md:text-5xl font-semibold">Congratulations!</h1>
         {darkMode && <img src="/images/dark-check-white.svg" alt="success" />}
         {!darkMode && <img src="/images/check-white-1.png" alt="success" />}
 
@@ -99,10 +96,7 @@ function BidModal() {
     <Modal>
       {(setIsOpen) => ({
         content: isSuccess ? (
-          <SuccessBidContent
-            setIsSuccess={setIsSuccess}
-            setIsOpen={setIsOpen}
-          />
+          <SuccessBidContent setIsSuccess={setIsSuccess} setIsOpen={setIsOpen} />
         ) : (
           <BidContent setIsSuccess={setIsSuccess} setIsOpen={setIsOpen} />
         ),

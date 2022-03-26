@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 
 function ContactUs() {
   return (
-    <section className="bg-light-violet py-12 dark:bg-light-green">
+    <section className="bg-light-violet py-12 dark:bg-light-green mb-12">
       <div className="form-container ml-[16px] mr-[16px] md:max-w-[450px] md:mx-[auto]  ">
         <h2 className="font-semibold text-[24px] text-center mb-4">Can’t find your answer?</h2>
         <p className="text-center text-light-gray-400 mb-10 dark:text-light-gray">

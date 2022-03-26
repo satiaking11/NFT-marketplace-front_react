@@ -13,7 +13,7 @@ type Props = {
 
 function BurgerMenuContent({ setIsOpen }: Props) {
   return (
-    <div className="w-full h-screen bg-white dark:bg-black-800 dark:text-white px-8 py-6">
+    <div className="w-full h-screen bg-white dark:bg-black-800 dark:text-white px-4 py-6">
       <div className="flex items-start justify-between mb-4">
         <button
           type="button"
@@ -28,9 +28,7 @@ function BurgerMenuContent({ setIsOpen }: Props) {
       </div>
       <SearchInput />
       <div className="mt-8">
-        <p className="text-light-gray-400 dark:text-light-gray text-[16px] mb-5">
-          Explore
-        </p>
+        <p className="text-light-gray-400 dark:text-light-gray text-[16px] mb-5">Explore</p>
         <ul className="flex flex-col gap-y-6">
           <li>
             <Link className="text-[20px]" to="/explore">
@@ -53,9 +51,7 @@ function BurgerMenuContent({ setIsOpen }: Props) {
             </Link>
           </li>
         </ul>
-        <p className="text-light-gray-400 dark:text-light-gray text-[16px] my-5">
-          Resources
-        </p>
+        <p className="text-light-gray-400 dark:text-light-gray text-[16px] my-5">Resources</p>
         <ul className="flex flex-col gap-y-6">
           <li>
             <Link className="text-[20px]" to="/explore">

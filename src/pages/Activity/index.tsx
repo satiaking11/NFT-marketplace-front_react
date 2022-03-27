@@ -10,7 +10,7 @@ function Activity() {
 
   return (
     <div className="activity-page mt-12">
-      <div className="container p-[16px] md:p-0">
+      <div className="container p-[16px] xl:p-0">
         <PageTitle className="mb-6">Activity</PageTitle>
         <CollectionsActivity />
       </div>

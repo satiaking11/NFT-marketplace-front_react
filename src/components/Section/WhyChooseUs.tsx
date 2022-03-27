@@ -14,7 +14,7 @@ function WhyChooseUs({ withLabel = false, withMoreDetails = false }: Props) {
   return (
     <section className="why-choose-us  md:p-0">
       {withLabel && <SectionTitle className="mb-6">Why Choose Us</SectionTitle>}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6  gap-x-20">
+      <div className="grid grid-cols-1 gap-6  gap-x-20 lg:grid-cols-3 lg:gap-x-10 ">
         {[
           {
             title: 'Cheapest Fees on the Market',
@@ -40,7 +40,7 @@ function WhyChooseUs({ withLabel = false, withMoreDetails = false }: Props) {
         ))}
       </div>
       {withMoreDetails && (
-        <div className="py-72 flex flex-col items-center">
+        <div className="py-32 flex flex-col items-center">
           <img
             src={`/icons/why-choose-us/below-${darkMode ? 'dark' : 'light'}.png`}
             alt="below-logo"

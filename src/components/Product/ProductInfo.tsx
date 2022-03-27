@@ -4,11 +4,11 @@ import NFTBuyNow from '../Button/NFTBuyNow';
 
 function NFT() {
   return (
-    <div className="flex flex-col md:flex-row gap-6 p-[16px] md:p-0">
-      <div className="w-full md:w-[594px]">
-        <img src="images/nft/1.png" alt="cover" />
+    <div className="flex flex-col lg:flex-row gap-6 p-[16px] md:p-0">
+      <div className="w-full lg:w-[594px]">
+        <img src="images/nft/1.png" alt="cover" className="w-full" />
       </div>
-      <div className="w-full md:w-[594px] flex flex-col">
+      <div className="w-full lg:w-[594px] flex flex-col">
         <p className="text-[32px] order-1 font-semibold text-black-400 dark:text-light-gray mb-4 md:mb-10">
           NFT name could be so long and a litle bit longer
         </p>
@@ -24,12 +24,10 @@ function NFT() {
             </p>
           </div>
           <div className="flex justify-between mb-4">
-            <p className="text-gray-400 dark:text-light-gray">Released:</p>{' '}
-            <p>Feb 02, 2021</p>
+            <p className="text-gray-400 dark:text-light-gray">Released:</p> <p>Feb 02, 2021</p>
           </div>
           <div className="flex justify-between mb-4">
-            <p className="text-gray-400 dark:text-light-gray">№ of copies:</p>{' '}
-            <p>23</p>
+            <p className="text-gray-400 dark:text-light-gray">№ of copies:</p> <p>23</p>
           </div>
           <div className="flex justify-between mb-4">
             <p className="text-gray-400 dark:text-light-gray">Status:</p>{' '}

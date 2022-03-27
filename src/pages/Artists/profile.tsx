@@ -12,7 +12,7 @@ function ArtistPage() {
   useScrollToTop();
 
   return (
-    <div className="px-4 md:px-0 artist-profile mt-12">
+    <div className="px-4 xl:px-0 artist-profile mt-12">
       <div className="container">
         <div className="flex flex-row items-center">
           <Icon name="arrow-left" className="stroke-current dark:text-white mr-2" />

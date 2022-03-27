@@ -6,7 +6,7 @@ import './HideScrollbars.sass';
 function HelpCategories() {
   const [active, setActive] = useState('General');
   return (
-    <div className="help-categories flex items-center gap-2 md:gap-x-10 mb-10 overflow-x-auto overflow-y-hidden">
+    <div className="help-categories flex items-center gap-2 md:gap-x-4 lg:gap-x-10 mb-10 overflow-x-auto overflow-y-hidden">
       {['General', 'Wallets', 'Getting started', 'Popular questions'].map((item) => (
         <button
           key={item}

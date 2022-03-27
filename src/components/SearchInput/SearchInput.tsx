@@ -39,7 +39,7 @@ function SearchInput({ className = '' }: Props) {
       {isOpen && (
         <div ref={ref}>
           {isComponentVisible && setIsOpen && (
-            <DefaultCard className=" absolute w-full px-8 py-9 z-10">
+            <DefaultCard className=" absolute w-full lg:w-[420px]  px-8 py-9 z-10">
               <h5 className="font-bold text-black-400 mb-4 dark:text-white">Items</h5>
               {[
                 {

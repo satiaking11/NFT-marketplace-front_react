@@ -6,7 +6,7 @@ import PageTitle from '../../components/PageTitle';
 function Preposition() {
   const data = [1, 2, 3, 4];
   return (
-    <div className="preposition mt-12 mb-20 px-4 md:px-0">
+    <div className="preposition mt-12 mb-20 px-4 xl:px-0">
       <div className="container">
         <PageTitle>
           My Propositions
@@ -14,7 +14,7 @@ function Preposition() {
         </PageTitle>
         {data.length === 0 && <NoDataFound />}
         {data.map(() => (
-          <NftDetail bids />
+          <NftDetail preposition />
         ))}
       </div>
     </div>

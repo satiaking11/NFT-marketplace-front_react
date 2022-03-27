@@ -13,7 +13,7 @@ function NftDetail({ preposition, bids }: Props) {
   return (
     <div className="my-6 p-4 md:p-8 bg-light-gray-50 md:max-w-[845px] w-full rounded-[32px] dark:bg-black-800">
       <div className="flex flex-col md:flex-row justify-between ">
-        <div className="flex md:max-h-[115px]  md:w-[60%] w-full md:pr-8 pb-8 md:pb-0  border-b border-light-gray-1 md:border-0">
+        <div className="flex md:max-h-[115px] md:w-[50%] lg:w-[60%] w-full md:pr-8 pb-8 md:pb-0  border-b border-light-gray-1 md:border-0">
           <div className="mr-4">
             <img
               src="/images/nft/1.png"
@@ -31,7 +31,7 @@ function NftDetail({ preposition, bids }: Props) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:w-[40%] pr-2.5 pt-8 md:pl-9 md:border-l md:border-light-gray-1">
+        <div className="flex flex-col md:w-[50%] lg:w-[40%] pr-2.5 pt-8 md:pt-0 md:pl-9 md:border-l md:border-light-gray-1">
           {preposition && (
             <div className="mb-4">
               <div className="flex mb-2.5 text-light-gray-400 dark:text-dark-gray-400">

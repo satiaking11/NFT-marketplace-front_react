@@ -15,10 +15,10 @@ function ArtistsList() {
           <ButtonFilter />
         </div>
       </div>
-      <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="my-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item, index) => (
           <Link to="/artist-profile">
-            <DefaultCard key={item} className=" md:w-card-lg">
+            <DefaultCard key={item} className=" lg:w-card-xl">
               <div className=" max-w-[331px] h-[532px] w-full text-center flex flex-col items-center mx-auto">
                 <div className="flex-grow">
                   <div className="rounded-full overflow-hidden h-[197px] w-[197px] mx-auto mt-8">

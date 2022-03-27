@@ -16,12 +16,16 @@ function NftAvailability({ success, error }: Props) {
 
   return (
     <div
-      className={`container py-4 px-4 md:px-10 mb-[32px] ${
+      className={`container py-4 px-4  lg:px-10 mb-[32px] ${
         error && 'bg-light-red dark:bg-dark-red'
       } ${success && 'bg-light-blue dark:bg-light-green'}  `}
     >
-      <div className="flex flex-wrap md:flex-row md:justify-between md:items-center">
-        <div className={`left grow  w-[90%] order-1  md:mb-6 md:mb-0 ${isOpen && 'mb-4'}`}>
+      <div className="flex flex-wrap md:flex-row md:flex-nowrap  md:justify-between md:items-center">
+        <div
+          className={`left grow  w-[90%] md:w-[25%]  order-1 md:order-1   ${
+            isOpen && 'mb-4 md:mb-10 xl:mb-0'
+          }`}
+        >
           <div className=" md:max-w-[370px]">
             <h2 className="text-black-400 text-2xl font-bold mb-4 dark:text-white">
               Not available for SALE now
@@ -41,7 +45,7 @@ function NftAvailability({ success, error }: Props) {
           </div>
         </div>
         {error && (
-          <div className="order-3 right bg-white w-full md:w-[35%] py-4 px-4 md:px-7 md:mr-[66px] dark:border dark:border-white dark:bg-transparent">
+          <div className="order-3 md:order-2 right bg-white w-full md:w-[40%] lg:w-[35%] py-4 px-4 lg:px-7 xl:mr-[66px] dark:border dark:border-white dark:bg-transparent">
             <h4 className="text-xl text-black-400 mb-2 dark:text-white">
               You have
               <span className="fomt-semibold text-red-400"> 5 </span>
@@ -77,14 +81,14 @@ function NftAvailability({ success, error }: Props) {
         )}
         {isOpen && (
           <div
-            className={`order-2 w-[10%] ${isOpen && 'mb-auto'}`}
+            className={`order-2 w-[10%] flex justify-end ${isOpen && 'mb-auto'}`}
             onClick={() => setIsOpen(false)}
           >
             <Icon name="chevron-up" className="stroke-current dark:text-white ml-2" />
           </div>
         )}
         {!isOpen && (
-          <div className="order-2 w-[10%]" onClick={() => setIsOpen(true)}>
+          <div className="order-2 w-[10%] flex justify-end" onClick={() => setIsOpen(true)}>
             <Icon name="chevron-down" className="stroke-current dark:text-white ml-2" />
           </div>
         )}

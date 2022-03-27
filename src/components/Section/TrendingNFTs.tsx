@@ -15,7 +15,7 @@ type Props = {
 
 function NFTList() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
         <Card key={item} cover={`/images/nft-cover/trending/${item}.png`}>
           <div className="card-details px-8 py-6">
@@ -39,17 +39,17 @@ function TrendingNFTs({
   className,
 }: Props) {
   return (
-    <section className={`explore-categories overflow-hidden md:mb-36  md:p-0 ${className}`}>
+    <section className={`explore-categories lg:overflow-hidden mb-24   lg:p-0 ${className}`}>
       <div className="flex justify-between items-center mb-4">
         <SectionTitle>{title}</SectionTitle>
-        <LinkWithIcon href="/" className="block md:hidden">
+        <LinkWithIcon href="/" className="block lg:hidden">
           Explore all
         </LinkWithIcon>
       </div>
       {withMenu && (
         <div className="flex items-center justify-between mb-6">
           <CategoriesMenu />
-          <LinkWithIcon href="/" className="hidden md:block">
+          <LinkWithIcon href="/" className="hidden lg:block">
             Explore all
           </LinkWithIcon>
         </div>

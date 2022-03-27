@@ -12,8 +12,8 @@ import './Topbar.sass';
 
 function Topbar() {
   return (
-    <div className="flex topbar container w-full relative z-50 p-[16px] md:p-0">
-      <div className="md:hidden flex justify-center">
+    <div className="flex topbar container w-full relative z-50 p-[16px] xl:p-0">
+      <div className="lg:hidden flex justify-center">
         <BurgerMenu />
       </div>
       <div className="flex items-center">
@@ -22,12 +22,12 @@ function Topbar() {
             <Logo />
           </Link>
         </div>
-        <SearchInput className="hidden md:block" />
+        <SearchInput className="hidden lg:block" />
       </div>
-      <div className="md:hidden flex justify-center">
+      <div className="lg:hidden flex justify-center">
         <NotificationButton />
       </div>
-      <div className="hidden md:flex gap-x-10 flex-grow justify-end items-center">
+      <div className="hidden lg:flex lg:gap-x-6 flex-grow justify-end items-center">
         <ul className="flex gap-x-6">
           <li>
             <Explore />

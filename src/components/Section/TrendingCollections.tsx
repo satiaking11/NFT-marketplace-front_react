@@ -14,11 +14,11 @@ type Props = {
 
 function CollectionsList() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-6  mx-auto">
       {[1, 2, 3].map((item) => (
         <Link key={item} to="/collections">
           <Card
-            className="w-full md:w-card-lg"
+            className="w-full lg:w-card-xl"
             cover={`images/nft-cover/collections/${item}.png`}
             avatar={`images/avatar/collections/${item}.png`}
           >
@@ -48,7 +48,7 @@ function TrendingCollections({
   explore = false,
 }: Props) {
   return (
-    <section className="explore-categories mb-36  md:p-0">
+    <section className="explore-categories mb-36  lg:p-0">
       <SectionTitle className="mb-4">{title}</SectionTitle>
       {withMenu && (
         <div className="flex items-center justify-between mb-6">

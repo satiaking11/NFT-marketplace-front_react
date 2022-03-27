@@ -15,7 +15,7 @@ function Home() {
   const [active, setActive] = useState('NFTs');
 
   return (
-    <div className="artists-page mt-12">
+    <div className="artists-page mt-12 px-4 xl:px-0">
       <div className="container">
         <div className="block md:flex md:flex-row md:items-center mb-6 px-4 md:px-0">
           <PageTitle className="mr-10 mb-5">Explore</PageTitle>

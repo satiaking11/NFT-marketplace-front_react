@@ -22,7 +22,7 @@ type Props = {
 
 function NFTList() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-col-4 gap-6">
       {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
         <Card key={item} cover={`/images/nft-cover/trending/${item}.png`}>
           <div className="card-details px-8 py-6">

@@ -6,7 +6,7 @@ import './HideScrollbars.sass';
 
 function NFTListWithSwiper() {
   return (
-    <section className="mb-20 md:mb-36">
+    <section className="">
       <div className="nft-list-swiper relative w-full flex gap-6 snap-x overflow-x-auto pb-14">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
           <div key={item} className="snap-center flex">

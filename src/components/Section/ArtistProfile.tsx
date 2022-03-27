@@ -7,7 +7,7 @@ import WatchVideo from '../WatchVideo/WatchVideo';
 function ArtistProfile() {
   return (
     <section className="md:p-0 max-w-[1024px] mx-auto artist-profile mb-36">
-      <div className="flex flex-col md:flex-row dark:text-white md:p-10 flex items-center justify-between">
+      <div className="flex flex-col lg:flex-row dark:text-white lg:p-10 flex items-center justify-between">
         <div className="w-full h-full text-center flex flex-col">
           <div className="flex-grow">
             <div className="rounded-full overflow-hidden h-[197px] w-[197px] mx-auto mt-4">
@@ -18,7 +18,7 @@ function ArtistProfile() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:ml-10">
+        <div className="flex flex-col lg:ml-10">
           <p className="text-[32px] font-semibold mt-4">Kimberly Mastrangelo</p>
           <p className="text-black-400 dark:text-light-gray mt-4">
             Brushpops is a generative system inspired by Roy Lichtenstein’s iconic work, where a

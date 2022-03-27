@@ -4,7 +4,7 @@ import NFTCollections from './NFTCollections';
 
 function ExploreList() {
   return (
-    <section className="artists-list p-[16px] md:p-0">
+    <section className="artists-list  lg:p-0">
       <NFTCollections withMenu withSort withFilter title="Categories" />
       <LoadMoreButton />
     </section>

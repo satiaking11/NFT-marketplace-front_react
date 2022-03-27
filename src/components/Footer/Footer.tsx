@@ -4,12 +4,15 @@ import Logo from '../Logo/Logo';
 
 function Footer() {
   return (
-    <div className="container border-t border-gray-300 pt-12 px-[12px] md:p-0">
+    <div className="container border-t border-gray-300 pt-12 px-[16px] xl:p-0">
       <div className="mb-4">
         <Logo />
       </div>
       <div className="flex flex-col md:flex-row justify-between border-b border-gray-300 pb-12 leading-7">
-        <p className="max-w-[435px] w-full dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus nulla volutpat, dictumst non, vitae aliquet enim et ut. Facilisis risus.</p>
+        <p className="max-w-[400px] w-full dark:text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus nulla volutpat, dictumst
+          non, vitae aliquet enim et ut. Facilisis risus.
+        </p>
         <div className="flex items-start gap-x-32 text-primary dark:text-white mt-8 md:mt-0">
           <ul>
             <li>Explore</li>
